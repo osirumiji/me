@@ -424,7 +424,7 @@
 			var hash = window.location.hash;
 			
 			$(".loader-img").delay(500).fadeOut();
-			$("#page-loader").delay(1000).fadeOut("slow");
+			$("#page-loader").delay(4000).fadeOut("slow");
 			
 			if(!hash) { 
 				// Do nothing //
@@ -530,8 +530,8 @@
 		if(typeof $.fn.bxSlider !== 'undefined'){
 			
 			$('.portfolio-slider .slides').bxSlider({
-				 mode: 'horizontal',					// Type of transition between slides: 'horizontal', 'vertical', 'fade'		
-				 speed: 500,							// Slide transition duration (in ms)
+				 mode: 'fade',					// Type of transition between slides: 'horizontal', 'vertical', 'fade'		
+				 speed: 1000,							// Slide transition duration (in ms)
 				 infiniteLoop: true,					// If true, clicking "Next" while on the last slide will transition to the first slide and vice-versa.
 				 hideControlOnEnd: false,				// If true, "Next" control will be hidden on last slide and vice-versa. Only used when infiniteLoop: false
 				 pager: true,							// If true, a pager will be added
