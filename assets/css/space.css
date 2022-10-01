@@ -209,6 +209,29 @@
     @keyframes animated-cursor{ from{border-right-color: rgba(0, 110, 255, 0.75);} to{border-right-color: transparent;} }
 
 
+/**typing text 1*/
+
+
+.typing-1 { border-right: solid 3px rgba(0, 89, 255, 0.75);
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 20px;
+    color: rgba(255, 38, 0, 0.7); }
+    
+    /* Animation */
+    .typing-1 {  animation: animated-text 1s steps(29) 7.5s 1 normal both, animated-cursor 600ms steps(25) infinite; }
+    
+    /* text animation */
+    @keyframes animated-text {  from{width: 0;} to{width: 390px;} }
+    
+    /* cursor animations */
+    @keyframes animated-cursor{ from{border-right-color: rgba(0, 110, 255, 0.75);} to{border-right-color: transparent;} }
+
+	
+
+
+
 /**typing text 2*/
 
 
@@ -220,85 +243,7 @@
     color: rgba(255, 38, 0, 0.7); }
     
     /* Animation */
-    .typing-2 {  animation: animated-text 1s steps(29) 7.5s 1 normal both, animated-cursor 600ms steps(25) infinite; }
-    
-    /* text animation */
-    @keyframes animated-text {  from{width: 0;} to{width: 390px;} }
-    
-    /* cursor animations */
-    @keyframes animated-cursor{ from{border-right-color: rgba(0, 110, 255, 0.75);} to{border-right-color: transparent;} }
-
-	
-
-/**typing text 3*/
-
-.typing-3 { border-right: solid 3px rgba(0, 89, 255, 0.75);
-    white-space: nowrap;
-    overflow: hidden;
-    font-family: 'Source Code Pro', monospace;
-    font-size: 30px;
-    color: rgba(0, 0, 0, 0.7); }
-    
-    /* Animation */
-    .typing-3 {  animation: animated-text 1.5s steps(29) 9s 1 normal both, animated-cursor 600ms steps(29) infinite; }
-    
-    /* text animation */
-    @keyframes animated-text{  from{width: 0;} to{width: 390px;} }
-    
-    /* cursor animations */
-    @keyframes animated-cursor{ from{border-right-color: rgba(0, 110, 255, 0.75);} to{border-right-color: transparent;} }
-
-
-/**typing text 4*/
-
-.typing-0 { border-right: solid 3px rgba(0, 89, 255, 0.75);
-    white-space: nowrap;
-    overflow: hidden;
-    font-family: 'Source Code Pro', monospace;
-    font-size: 20px;
-    color: rgba(0, 0, 0, 0.7); }
-    
-    /* Animation */
-    .typing-0 {  animation: animated-text 1.5s steps(29) 0.5s 1 normal both, animated-cursor 600ms steps(29) infinite; }
-    
-    /* text animation */
-    @keyframes animated-text{  from{width: 0;} to{width: 390px;} }
-    
-    /* cursor animations */
-    @keyframes animated-cursor{ from{border-right-color: rgba(0, 110, 255, 0.75);} to{border-right-color: transparent;} }
-
-
-/**typing text 5*/
-
-.typing-00 { border-right: solid 3px rgba(0, 89, 255, 0.75);
-    white-space: nowrap;
-    overflow: hidden;
-    font-family: 'Source Code Pro', monospace;
-    font-size: 15px;
-    color: rgba(0, 0, 0, 0.7); }
-    
-    /* Animation */
-    .typing-00 {  animation: animated-text 1s steps(29) 2.5s 1 normal both, animated-cursor 600ms steps(29) infinite; }
-    
-    /* text animation */
-    @keyframes animated-text{  from{width: 0;} to{width: 390px;} }
-    
-    /* cursor animations */
-    @keyframes animated-cursor{ from{border-right-color: rgba(0, 110, 255, 0.75);} to{border-right-color: transparent;} }
-
-
-/**typing text 6*/
-
-
-.typing-6 { border-right: solid 3px rgba(0, 89, 255, 0.75);
-    white-space: nowrap;
-    overflow: hidden;
-    font-family: 'Source Code Pro', monospace;
-    font-size: 20px;
-    color: rgba(255, 38, 0, 0.7); }
-    
-    /* Animation */
-    .typing-6 {  animation: animated-text 1s steps(29) 11s 1 normal both, animated-cursor 600ms steps(25) infinite; }
+    .typing-2 {  animation: animated-text 1s steps(29) 11s 1 normal both, animated-cursor 600ms steps(25) infinite; }
     
     /* text animation */
     @keyframes animated-text {  from{width: 0;} to{width: 390px;} }
@@ -1963,8 +1908,8 @@
 	}
 
 	.main-slider-slide__content h1 {
-		color: #ffffff;
-		font-size: 37px;
+		color: #3971e0;
+		font-size: 36px;
 		line-height: 51px;
 		font-weight: 600;
 	}
@@ -1973,7 +1918,6 @@
 		font-weight: 600;
 		color: #ffffff;
 	}
-	
 	.main-slider .main-slider__pager {
 		position: absolute;
 		width: 100%;
@@ -4058,8 +4002,8 @@
 	}
 	
 	#bg-3 {
-		padding: 100px 0 140px 0;
-		margin-top: 50px;
+		padding: 100px 0 20px 0;
+		margin-top: 0px;
 		background-image: url(../../content/backgrounds/1920x380.jpg); 
 	}
 	

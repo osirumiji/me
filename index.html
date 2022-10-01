@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -56,9 +56,7 @@
 <body class="sticky-header">
 
 	<div id="page-loader">
-        <p class="typing-0" >WARNING! Space geek ahead!</p>
-            <o class="typing-00" >Proceed with caution</o>
-		<div class="loader-img">
+        <div class="loader-img">
             
 			<img src="assets/images/loader.gif" alt="Please wait while the site is loading..."> 
           
@@ -71,17 +69,19 @@
         <header>
 		
 			<div class="animate" data-animation="fadeInLeftBig" data-animation-delay="500" data-animation-speed="3500" id="header">
-
-
-
-
-
-
 			
 			<!-- /// HEADER  ///////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 			
 				<div class="row">
-				
+					<div class="span3">
+					
+						<!-- // Logo // -->
+						
+						<a href="index.html" id="logo">
+							<img class="responsive-img" src="assets/images/logo.png" alt="">
+						</a>
+					
+					</div><!-- end .span3 -->
 					<div class="span9">
 					
 						<!-- // Mobile menu trigger // -->
@@ -96,20 +96,19 @@
 						
 							<ul class="sf-menu fixed" id="menu">
 								<li>
-									<a href="index.html">Home</a>
+									<a href="#home">Home</a>
 								</li>
 								<li>
-									<a href="about-me.html">About me</a>                            
+									<a href="#about">About us</a>                            
 								</li>
 								<li>                        	
-									<a href="services.html">Services</a>                                                        
+									<a href="#services">Services</a>                                                        
 								</li>			
 								<li>
-									<a href="portfolio.html">My portfolio</a>                                                   
+									<a href="#portfolio">Portfolio</a>                                                   
 								</li>
-                             
 								<li>
-									<a href="projects.html">Projects</a>                          
+									<a href="#blog">Blog</a>                          
 								<li>
 									<a href="#contact">Contact</a>                              
 								</li>
@@ -130,41 +129,62 @@
 		
 		<!-- /// CONTENT  /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-			<div class="main-slider">
+        <div class="main-slider">
+				
+            <ul class="main-slider__slides" data-slick='{ "fade": true, "speed": 500, "autoplay": false, "infinite": true, "dots": true, "arrows": true }'>
+                <li style="background-image:url('content/slider/techheader.png');">
                 
-				<ul class="main-slider__slides" data-slick='{ "fade": true, "speed": 500, "autoplay": false, "infinite": false, "dots": false, "arrows": false }'>
-					
-                    <li style="background-image:url('content/slider/mewebheader.jpeg');">
-                      
-                   
-          
+                    <div class="main-slider-slide__content 
+                                main-slider-slide__content--valign-middle 
+                                main-slider-slide__content--align-left"> 
 
-                    
-                        <div class="main-slider-slide__content 
-									main-slider-slide__content--valign-middle 
-									main-slider-slide__content--align-left"> 
-                                    
-							<div class="main-slider-slide__content-wrap">  		
-                              
-                                <p class="typing" >Hello there traveller of the web</p>
-                                <p class="typing-2" >Welcome to my website</p>
-								<p class="typing-3" >My name is OSIRUMIJI</p>
-                                <p class="typing-6" >It's nice to meet you</p>
+                        <div class="main-slider-slide__content-wrap">  		
                                 
-             
-
-
-						</div><!-- end .main-slider-slide__content -->	
-                      
-					</li>
+                            <h1 data-animation="fadeInDown" data-delay="0.5s">OSIRUMIJI IHUDE</h1>
+                            
+                            <p data-animation="fadeInDown" data-delay="1s" class="hidden-phone">
+                                Teen scientist and researcher, Space enthusiast🚀, Environmentalist🍀,<br>
+                                Inventor, learning AI, Programmer, Engineer⚙️, STREM Promoter, Web developer,<br>
+                                Graphic designer, Founder, Chess player,
+                            </p>
+                            
+                            <p data-animation="fadeInDown" data-delay="1.5s"><a class="btn text-uppercase">About me</a></p> 
+                        
+                        </div><!-- end .main-slider-slide__content-wrap -->
+                        
+                    </div><!-- end .main-slider-slide__content -->	
                     
-				</ul>	
-      
-				<div class="main-slider__pager main-slider__pager--align-center"></div>
-				<div class="main-slider__arrows"></div>
+                </li>
+                <li style="background-image:url('content/slider/1920x1080-2.png');">
                 
-			</div><!-- end .main-slider -->
-        
+                    <div class="main-slider-slide__content 
+                                main-slider-slide__content--valign-middle 
+                                main-slider-slide__content--align-left"> 
+
+                        <div class="main-slider-slide__content-wrap">  		
+                                
+                            <h1 data-animation="fadeInDown" data-delay="0.5s">Discover new worlds!</h1>
+                            
+                            <p data-animation="fadeInDown" data-delay="1s" class="hidden-phone">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit gravida justo.<br>
+                                Cras posuere nulla et ex consequat, id viverra omis ornare vulputate vestibulum<br>
+                                tellus, ac efficitur nisl imperdiet eu. 
+                            </p>
+                            
+                            <p data-animation="fadeInDown" data-delay="1.5s"><a class="btn text-uppercase">Read more</a></p>
+                        
+                        </div><!-- end .main-slider-slide__content-wrap -->
+                        
+                    </div><!-- end .main-slider-slide__content -->	
+                    
+                </li>
+            </ul>	
+            
+            <div class="main-slider__pager main-slider__pager--align-center"></div>
+            <div class="main-slider__arrows"></div>
+            
+        </div><!-- end .main-slider -->
+      
             <div class="fullwidth-section" id="bg-1">
             	
                 <div class="fullwidth-section-content">
@@ -267,32 +287,18 @@
             
             <div id="portfolio">
             
-                <div class="fullwidth-section horizontal-parallax" data-parallax_sense="100" id="bg-4">
-                    
-                    <div class="fullwidth-section-content">
-                        
-                        <div class="row">
-                            <div class="span12">
-                                
-                                <div class="headline">
-                                    
-                                    <h2>Projects and features</h2>
-                                    
-                                </div><!-- end .headline -->
-                                
-                            </div><!-- end .span12 -->
-                        </div><!-- end .row -->
-                        
-                    </div><!-- end .fullwidth-section-content -->
-                </div><!-- end .fullwidth-section -->
-                        
+              
                 <div class="fullwidth-section" id="bg-10">
                     
                     <div class="fullwidth-section-content">
-                    
+                       
                         <div class="row">
                             <div class="span12">
-                                
+                                <div class="headline">
+                                    
+                                    <h2>Features</h2>
+                                    
+                                </div><!-- end .headline -->
                                 <div class="portfolio-slider">
                                     
                                     <ul class="slides">
@@ -304,7 +310,7 @@
                                                     <div class="portfolio-item">
                             
                                                         <div class="portfolio-item-preview">
-                                                            
+                                                       
                                                             <img src="content/portfolio/370x250-1.png" alt="">
                                                             
                                                             <div class="portfolio-item-overlay">
@@ -316,9 +322,26 @@
                                                                     </a>
                                                                     
                                                                 </div><!-- end .portfolio-item-overlay-actions -->
-                                                                
+                                                              
                                                             </div><!-- end .portfolio-item-overlay -->
-                                                            
+                                                        
+                                                                <div class="toggle">
+                            
+                                                                    <a class="toggle-item" href="#">UNICEF World Children's Day</a>
+                                                        
+                                                                    <div class="toggle-item-content">
+                                                                        
+                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum ultrices rutrum. Vestibulum 
+                                                                        vitae ultrices erat, sed dictum lacus. Phasellus laoreet lorem ac nisi aliquam egestas. Proin porta velit 
+                                                                        non quam faucibus venenatis. Morbi vestibulum libero sit amet urna tristique ultricies. Donec neque erat, 
+                                                                        rhoncus sed est vel, sagittis rhoncus diam. Nunc felis leo, bibendum ac est non, malesuada volutpat nibh. 
+                                                                        Proin pulvinar consequat tellus, quis tempus ipsum semper ut. Interdum et malesuada fames ac ante ipsum 
+                                                                        primis in faucibus.</p>
+                                                                        
+                                                                    </div><!-- end .toggle-item-content -->
+                                            
+                                                                </div class="toggle">
+
                                                         </div><!-- end .portfolio-item-preview -->
                                                         
                                                     </div><!-- end .portfolio-item -->
@@ -343,7 +366,22 @@
                                                                 </div><!-- end .portfolio-item-overlay-actions -->
                                                                 
                                                             </div><!-- end .portfolio-item-overlay -->
-                                                            
+                                                            <div class="toggle">
+                            
+                                                                <a class="toggle-item" href="#">Africa Science Buskers Festival 2022</a>
+                                                    
+                                                                <div class="toggle-item-content">
+                                                                    
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum ultrices rutrum. Vestibulum 
+                                                                    vitae ultrices erat, sed dictum lacus. Phasellus laoreet lorem ac nisi aliquam egestas. Proin porta velit 
+                                                                    non quam faucibus venenatis. Morbi vestibulum libero sit amet urna tristique ultricies. Donec neque erat, 
+                                                                    rhoncus sed est vel, sagittis rhoncus diam. Nunc felis leo, bibendum ac est non, malesuada volutpat nibh. 
+                                                                    Proin pulvinar consequat tellus, quis tempus ipsum semper ut. Interdum et malesuada fames ac ante ipsum 
+                                                                    primis in faucibus.</p>
+                                                                    
+                                                                </div><!-- end .toggle-item-content -->
+                                        
+                                                            </div class="toggle">
                                                         </div><!-- end .portfolio-item-preview -->
                                                         
                                                     </div><!-- end .portfolio-item -->
@@ -368,172 +406,29 @@
                                                                 </div><!-- end .portfolio-item-overlay-actions -->
                                                                 
                                                             </div><!-- end .portfolio-item-overlay -->
-                                                            
-                                                        </div><!-- end .portfolio-item-preview -->
-                                                        
-                                                    </div><!-- end .portfolio-item -->
-                                                    
-                                                </div><!-- end .span4 -->
-                                            </div><!-- end .row -->
-                                        </li>
-                                        <li>
-                                            <div class="row">
-                                                <div class="span4">
-                                                    
-                                                    <div class="portfolio-item">
+                                                            <div class="toggle">
                             
-                                                        <div class="portfolio-item-preview">
-                                                            
-                                                            <img src="content/portfolio/370x250-4.png" alt="">
-                                                            
-                                                            <div class="portfolio-item-overlay">
-                                                                
-                                                                <div class="portfolio-item-overlay-actions">
+                                                                <a class="toggle-item" href="#">NASA Space Apps International Challenge</a>
+                                                    
+                                                                <div class="toggle-item-content">
                                                                     
-                                                                    <a class="portfolio-item-link magnificPopup-project" href="project.html">
-                                                                        <img src="assets/images/icon-zoom.png" alt="">
-                                                                    </a>
+                                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum ultrices rutrum. Vestibulum 
+                                                                    vitae ultrices erat, sed dictum lacus. Phasellus laoreet lorem ac nisi aliquam egestas. Proin porta velit 
+                                                                    non quam faucibus venenatis. Morbi vestibulum libero sit amet urna tristique ultricies. Donec neque erat, 
+                                                                    rhoncus sed est vel, sagittis rhoncus diam. Nunc felis leo, bibendum ac est non, malesuada volutpat nibh. 
+                                                                    Proin pulvinar consequat tellus, quis tempus ipsum semper ut. Interdum et malesuada fames ac ante ipsum 
+                                                                    primis in faucibus.</p>
                                                                     
-                                                                </div><!-- end .portfolio-item-overlay-actions -->
-                                                                
-                                                            </div><!-- end .portfolio-item-overlay -->
-                                                            
+                                                                </div><!-- end .toggle-item-content -->
+                                        
+                                                            </div class="toggle">
                                                         </div><!-- end .portfolio-item-preview -->
                                                         
                                                     </div><!-- end .portfolio-item -->
                                                     
                                                 </div><!-- end .span4 -->
-                                                <div class="span4">
-                                                    
-                                                    <div class="portfolio-item">
-                            
-                                                        <div class="portfolio-item-preview">
-                                                            
-                                                            <img src="content/portfolio/370x250-5.png" alt="">
-                                                            
-                                                            <div class="portfolio-item-overlay">
-                                                                
-                                                                <div class="portfolio-item-overlay-actions">
-                                                                    
-                                                                    <a class="portfolio-item-link magnificPopup-project" href="project.html">
-                                                                        <img src="assets/images/icon-zoom.png" alt="">
-                                                                    </a>
-                                                                    
-                                                                </div><!-- end .portfolio-item-overlay-actions -->
-                                                                
-                                                            </div><!-- end .portfolio-item-overlay -->
-                                                            
-                                                        </div><!-- end .portfolio-item-preview -->
-                                                        
-                                                    </div><!-- end .portfolio-item -->
-                                                    
-                                                </div><!-- end .span4 -->
-                                                <div class="span4">
-                                                    
-                                                    <div class="portfolio-item">
-                            
-                                                        <div class="portfolio-item-preview">
-                                                            
-                                                            <img src="content/portfolio/370x250-6.png" alt="">
-                                                            
-                                                            <div class="portfolio-item-overlay">
-                                                                
-                                                                <div class="portfolio-item-overlay-actions">
-                                                                    
-                                                                    <a class="portfolio-item-link magnificPopup-project" href="project.html">
-                                                                        <img src="assets/images/icon-zoom.png" alt="">
-                                                                    </a>
-                                                                    
-                                                                </div><!-- end .portfolio-item-overlay-actions -->
-                                                                
-                                                            </div><!-- end .portfolio-item-overlay -->
-                                                            
-                                                        </div><!-- end .portfolio-item-preview -->
-                                                        
-                                                    </div><!-- end .portfolio-item -->
-                                                    
-                                                </div><!-- end .span4 -->
-                                            </div><!-- end .row -->
-                                            
-                                        </li>
-                                        <li>
-                                            
-                                            <div class="row">
-                                                <div class="span4">
-                                                    
-                                                    <div class="portfolio-item">
-                            
-                                                        <div class="portfolio-item-preview">
-                                                            
-                                                            <img src="content/portfolio/370x250-7.png" alt="">
-                                                            
-                                                            <div class="portfolio-item-overlay">
-                                                                
-                                                                <div class="portfolio-item-overlay-actions">
-                                                                    
-                                                                    <a class="portfolio-item-link magnificPopup-project" href="project.html">
-                                                                        <img src="assets/images/icon-zoom.png" alt="">
-                                                                    </a>
-                                                                    
-                                                                </div><!-- end .portfolio-item-overlay-actions -->
-                                                                
-                                                            </div><!-- end .portfolio-item-overlay -->
-                                                            
-                                                        </div><!-- end .portfolio-item-preview -->
-                                                        
-                                                    </div><!-- end .portfolio-item -->
-                                                    
-                                                </div><!-- end .span4 -->
-                                                <div class="span4">
-                                                    
-                                                    <div class="portfolio-item">
-                            
-                                                        <div class="portfolio-item-preview">
-                                                            
-                                                            <img src="content/portfolio/370x250-8.png" alt="">
-                                                            
-                                                            <div class="portfolio-item-overlay">
-                                                                
-                                                                <div class="portfolio-item-overlay-actions">
-                                                                    
-                                                                    <a class="portfolio-item-link magnificPopup-project" href="project.html">
-                                                                        <img src="assets/images/icon-zoom.png" alt="">
-                                                                    </a>
-                                                                    
-                                                                </div><!-- end .portfolio-item-overlay-actions -->
-                                                                
-                                                            </div><!-- end .portfolio-item-overlay -->
-                                                            
-                                                        </div><!-- end .portfolio-item-preview -->
-                                                        
-                                                    </div><!-- end .portfolio-item -->
-                                                    
-                                                </div><!-- end .span4 -->
-                                                <div class="span4">
-                                                    
-                                                    <div class="portfolio-item">
-                            
-                                                        <div class="portfolio-item-preview">
-                                                            
-                                                            <img src="content/portfolio/370x250-9.png" alt="">
-                                                            
-                                                            <div class="portfolio-item-overlay">
-                                                                
-                                                                <div class="portfolio-item-overlay-actions">
-                                                                    
-                                                                    <a class="portfolio-item-link magnificPopup-project" href="project.html">
-                                                                        <img src="assets/images/icon-zoom.png" alt="">
-                                                                    </a>
-                                                                    
-                                                                </div><!-- end .portfolio-item-overlay-actions -->
-                                                                
-                                                            </div><!-- end .portfolio-item-overlay -->
-                                                            
-                                                        </div><!-- end .portfolio-item-preview -->
-                                                        
-                                                    </div><!-- end .portfolio-item -->
-                                                    
-                                                </div><!-- end .span4 -->
+
+
                                             </div><!-- end .row -->
                                         </li>
                   
@@ -546,6 +441,32 @@
                             </div><!-- end .span12 -->
                         </div><!-- end .row -->
                         
+                    
+                                <div class="row">
+                                    <div class="span12">
+                                       
+                                        <ul class="client-logos">
+                                            <li class="animate" data-animation="fadeInLeft">
+                                                <img src="content/clients/180x80-1.png" alt="">
+                                            </li>
+                                            <li class="animate" data-animation="fadeInLeft" data-animation-delay="400">
+                                                <img src="content/clients/180x80-2.png" alt="">
+                                            </li>
+                                            <li class="animate" data-animation="fadeInLeft" data-animation-delay="800">
+                                                <img src="content/clients/180x80-3.png" alt="">
+                                            </li>
+                                            <li class="animate" data-animation="fadeInLeft" data-animation-delay="1200">
+                                                <img src="content/clients/180x80-4.png" alt="">
+                                            </li>
+                                            <li class="animate" data-animation="fadeInLeft" data-animation-delay="1600">
+                                                <img src="content/clients/180x80-5.png" alt="">
+                                            </li>
+                                        </ul>
+                                    
+                                    </div><!-- end .span12 -->        
+                                </div><!-- end .row -->    
+                            
+
                     </div><!-- end .fullwidth-section-content -->
                     
                 </div><!-- end .fullwidth-section -->
