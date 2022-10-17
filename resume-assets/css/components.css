@@ -1,0 +1,1110 @@
+/**
+ * 	Name: components.css
+ *
+ *  Styling for the components that create the page content: accordion, tabs, pie charts etc.
+ *
+ *  T.O.C
+ *
+ *	=Accordions
+ *	=Alerts
+ *	=Animations
+ *	=Badges
+ *  =Breadcrumb
+ *	=Buttons
+ *  =Callout
+ *  =Cards
+ *	=Countdown
+ *	=Dividers
+ *  =Dropcaps
+ *	=Galleries
+ *	=Google Maps
+ *	=Headlines
+ *	=Icon Boxes
+ *	=Milestones
+ *	=Pagination
+ *	=Pie charts
+ *	=Pricing Tables
+ *	=Progress Bar
+ *	=Social Media
+ *	=Tabs
+ *	=Portfolio Item
+ *	=Portfolio Filter
+ *	=Portfolio Grid
+ *	=Portfolio Strip
+ *	=Owl Carousel
+ *	=Work Experience
+ *	=Fullwidth section
+ *
+ */
+ 
+/* ==========================================================================
+   =Accordions 
+   ========================================================================== */
+	
+	.accordion .card-header:first-child { border-radius: 0; }
+	
+	.accordion .card-header {
+		padding: 20px;
+		background-color: #ffffff;
+		border-bottom: none;
+	}
+	
+/* ==========================================================================
+   =Alerts
+   ========================================================================== */
+
+	.alert {
+		padding: 10px;
+		margin-bottom: 20px;
+		border-radius: 0;
+	}
+
+/* ==========================================================================
+   =Animations
+   ========================================================================== */
+   
+   .animate {
+		-webkit-animation-duration: 1s;
+				animation-duration: 1s;
+		-webkit-animation-fill-mode: both;
+				animation-fill-mode: both;
+		visibility: hidden;
+	}
+
+	.animate.visible { visibility: visible; }
+	.animate.hidden { visibility: hidden; }
+	
+/* ==========================================================================
+   =Badges
+   ========================================================================== */	
+   
+	.badge { padding: 8px; }
+	
+/* ==========================================================================
+   =Breadcrumb
+   ========================================================================== */	
+   
+	.breadcrumb { 
+		padding: 15px;
+		margin-bottom: 30px; 
+		border-radius: 0;
+		background-color: #007bff;
+		color: #ffffff;
+	}
+
+	.breadcrumb-item.active { color: #ffffff; }
+	
+	.breadcrumb-item + .breadcrumb-item:before { color: #ffffff; }
+	
+	.breadcrumb-item a,
+	.breadcrumb-item a:hover {
+		color: #ffffff;
+	}
+	
+/* ==========================================================================
+   =Buttons
+   ========================================================================== */
+   
+	.btn {
+		padding: 10px;
+		margin-bottom: 20px;
+		border-radius: 0;
+	}
+	
+	.btn:focus, 
+	.btn:hover {
+		text-decoration: none;
+		cursor: pointer;
+	}
+	
+	.btn-primary {
+		color: #fff;
+		background-color: #007bff;
+		border-color: #007bff;
+	}
+
+	.btn-primary:hover {
+		color: #fff;
+		background-color: #0069d9;
+		border-color: #0062cc;
+	}
+
+	.btn-primary:focus, .btn-primary.focus {
+		color: #fff;
+		background-color: #007bff;
+		border-color: #007bff;
+	}
+	
+/* ==========================================================================
+   =Callouts
+   ========================================================================== */
+   
+	.callout { 
+		position: relative;
+		display: block;
+		width: 100%;
+		padding: 20px; 
+		border: 1px solid #868e96;
+	}
+
+	.callout-content > *:last-child,
+	.callout-action > *:last-child { margin-bottom: 0; }
+	
+	.callout-content,
+	.callout-action {
+		display: block;
+		width: 100%;
+	}
+
+	.callout-action .btn { margin: 0; }
+	
+	.callout-content { 
+		text-align: center; 
+		margin-bottom: 20px; 
+	}
+	
+	.callout-action { text-align: center; }
+
+	@media (min-width: 768px) {
+		
+		.callout { display: table; }
+		
+		.callout-content,
+		.callout-action {
+			display: table-cell;
+			width: 100%;
+			vertical-align: middle;
+		}
+		
+		.callout-content { width: 70%; }
+	
+		.callout-action { width: 30%; }
+		
+		.callout-content { 
+			text-align: left; 
+			margin-bottom: 0; 
+		}
+		
+	}
+   
+/* ==========================================================================
+   =Cards
+   ========================================================================== */ 
+
+	.card { 
+		margin-bottom: 20px; 
+		border-radius: 0;
+	}
+	
+	.card-img-top {
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+/* ==========================================================================
+   =Countdown
+   ========================================================================== */
+
+	#defaultCountdown { text-align: center; }
+
+	.countdown-section {
+		position: relative;
+		display: inline-block;
+		margin-right: 10px;
+		text-align: center;
+	}
+	
+	.countdown-section:last-child { margin-right: 0; }
+	
+	.countdown-amount {
+		padding-left: 20px;
+		padding-right: 20px;
+		font-weight: 700;
+		color: #ffffff;
+		background-color: #0275D8;
+		font-size: 20px;
+	}
+	
+	.countdown-period { 
+		display: block; 
+		margin-top: 20px; 
+		font-size: 14px;
+		font-weight: 700;
+	}
+
+ 	@media (min-width: 768px) and (max-width: 991px) {
+		
+		.countdown-section { 
+			width: 50px; 
+			margin-right: 30px;
+		}
+		
+	} 
+
+/* ==========================================================================
+   =Dividers
+   ========================================================================== */
+
+	.divider { margin: 30px 0; }
+	
+	.divider.single-line { border-top: 1px solid #e0e0e0; }
+	
+	.divider.double-line { border-top: 4px double #e0e0e0; }
+
+/* ==========================================================================
+   =Dropcaps
+   ========================================================================== */
+   
+	 .dropcap {
+		float: left;
+		display: block;
+		margin: 5px 10px 0 0;
+		font-size: 34px;
+		line-height: 34px;
+	 }
+	
+	.dropcap.dropcap-square {
+		width: 34px;
+		height: 34px;
+		border-radius: 2px;
+		background-color: #007bff;		
+		color: #ffffff;
+		font-size: 20px;		
+		line-height: 34px;
+		text-align: center;
+	}
+	
+	.dropcap.dropcap-circle {
+		width: 34px;
+		height: 34px;
+		border-radius: 50%;
+		background-color: #007bff;		
+		color: #ffffff;
+		font-size: 20px;		
+		line-height: 34px;
+		text-align: center;
+	}
+   
+/* ==========================================================================
+   =Galleries
+   ========================================================================== */
+	
+	.gallery {}
+	
+	.gallery-item {}
+	
+/* ==========================================================================
+   =Google Maps
+   ========================================================================== */
+
+	.map { 
+		height: 500px; 
+		padding: 0 20px;
+	}
+	
+	.row .map { padding: 0; }
+	
+	/**
+	 * 1. needed so that Google Maps controls are not distorted
+	 */
+	
+	.google-map  img { max-width: none; }	/* 1 */
+	
+	@media (min-width: 768px) {
+
+		.map { padding: 0; }
+		
+	}
+
+/* ==========================================================================
+   =Headlines
+   ========================================================================== */
+
+	.headline { margin-bottom: 70px; }
+	
+	.headline h2 {
+		position: relative;
+		display: inline-block;
+		padding-bottom: 10px;
+	}
+	
+	.headline h2:after {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 80px;
+		height: 2px;
+		background-color: #007bff;
+		content: "";
+	}
+	
+/* ==========================================================================
+   =Icon Boxes
+   ========================================================================== */
+   
+	.icon-box-1 { 
+		position: relative; 
+		margin-bottom: 25px; 
+		text-align: center;
+	}
+		
+	.icon-box-1 > i { 
+		display: inline-block;
+		width: 80px;
+		height: 80px;
+		line-height: 80px;
+		background-color: #333;
+		color: #fff;
+		margin-bottom: 25px; 
+		font-size: 36px;
+		-webkit-transition: all .3s linear;
+				transition: all .3s linear;
+	}
+	
+	.icon-box-1 h4 { margin-bottom: 25px; }
+	
+	.icon-box-1 > img { margin-bottom: 10px; }
+	
+	.icon-box-1 .icon-box-content {}
+
+	.icon-box-1:hover > i {
+		color: #ffffff;
+		background-color: #007bff;
+	}
+
+/* ==========================================================================
+   =Milestones
+   ========================================================================== */
+
+	.milestone {
+		position: relative;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+
+	.milestone i {
+		display: block;
+		margin-bottom: 20px;
+		font-size: 42px;
+		color: #007bff;
+	}
+	
+	.milestone .milestone-content {
+		font-size: 26px;
+		line-height: 32px;
+	}
+	
+	.milestone .milestone-description { 
+		font-size: 14px; 
+		line-height: 21px;
+	}
+	
+/* ==========================================================================
+   =Pagination
+   ========================================================================== */
+   
+	.pagination { border-radius: 0; }
+
+	.page-item:first-child .page-link {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+
+	.page-item:last-child .page-link {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	.page-item.active .page-link {}
+
+	.page-item.disabled .page-link {}
+
+	.page-link {
+		padding: 0;
+		width: 40px;
+		height: 40px;
+		margin-left: 3px;
+		line-height: 40px;
+		text-align: center;
+		color: #007bff;
+		background-color: #fff;
+		border: 1px solid #ddd;
+		-webkit-transition: all .3s linear;
+				transition: all .3s linear;
+	}
+
+	.page-link:focus, 
+	.page-link:hover {
+		color: #ffffff;
+		background-color: #007bff;
+		border-color: #007bff;
+	}
+	
+	.page-link.navigation-dots {}
+	
+	@media (min-width: 768px) {
+		
+		.page-link {
+			width: 50px;
+			height: 50px;
+			margin-left: 10px;
+			line-height: 50px;
+		}
+		
+	} 
+
+/* ==========================================================================
+   =Pie charts
+   ========================================================================== */
+
+	.pie-chart {
+		position: relative;	
+		margin: 0 auto 30px;
+		text-align: center;
+	}
+	
+	.pie-chart canvas {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 0;
+	}
+	
+	.pie-chart i, 
+	.pie-chart .pie-chart-custom-text, 
+	.pie-chart .pie-chart-percent {
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		color: #111;
+		text-align: center;
+	}
+	
+	.pie-chart img {
+		max-width:100%;
+		vertical-align: middle;
+	}
+	
+	.pie-chart .pie-chart-custom-text {
+		font-size: 18px;
+	}
+	
+	.pie-chart .pie-chart-percent {
+		font-size: 16px;
+		font-weight: 700;
+	}
+	
+	.pie-chart-description {
+		display: block;
+		font-size: 12px;
+		text-align: center;
+	}
+
+/* ==========================================================================
+   =Pricing Tables
+   ========================================================================== */
+
+	.pricing-table {
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+		padding: 40px;
+		border: 1px solid #e0e0e0;
+		margin-bottom: 30px;
+		text-align: center;
+		-webkit-transition: background-color 0.3s;
+				transition: background-color 0.3s;
+	}
+
+	.pricing-table-header {	margin-bottom: 20px; }
+
+	.pricing-table-header h1 {
+		padding: 10px 0;
+		margin-bottom: 0;
+		font-size: 40px;
+	}
+	
+	.pricing-table-header h1 sup {
+		font-size: 25px;
+		font-weight: 700;
+	}
+
+	.pricing-table-header h4 {}
+		
+	.pricing-table-offer {}
+	
+	.pricing-table-offer ul { list-style: none; }
+	
+	.pricing-table-offer ul li { 
+		border-top: 1px solid #e0e0e0; 
+		padding: 10px 0; 
+	}
+	
+	.pricing-table-offer ul li:first-child { border-top: none; }
+
+/* ==========================================================================
+   =Progress Bar
+   ========================================================================== */
+
+	.progress {
+		background-color: #f3f3f3;
+		border-radius: 0;
+		box-shadow: none;
+		height: 3px;
+		margin-bottom: 20px;
+		overflow: visible;
+	}
+	
+	.progress-bar {
+		position: relative;
+		float: left;
+		width: 0;
+		height: 100%;
+		font-size: 12px;
+		line-height: 20px;
+		color: #fff;
+		text-align: center;
+		background-color: #007bff; 
+		-webkit-transition: width .6s;
+			transition: width .6s;
+	}
+	
+	.progress-bar-title p { 
+		margin-bottom: 20px; 
+		font-weight: 700; 
+	}
+
+	.progress-bar span {
+		position: absolute;
+		top: -42px;
+		right: 0;
+		color: #000;
+		font-size: 14px;
+	}
+	
+/* ==========================================================================
+   =Social Media
+   ========================================================================== */
+
+	a.social-icon {
+		float: left;
+		display: block;
+		width: 30px;
+		margin-right: 1px;
+		margin-bottom: 1px;
+		color: #444;
+		text-align: center;
+	}
+
+	a.social-icon:last-child { margin-right: 0; }
+
+	a.social-icon i {
+		font-size: 16px;
+		line-height: 30px;
+	}
+	
+	a.social-icon:hover { text-decoration: none; }
+	
+	a.facebook-icon:hover { color: #0e59a0 !important; }
+	a.twitter-icon:hover { color: #0ea4ff !important; }
+	a.dribble-icon:hover { color: #ea73a0 !important; }
+	a.pinterest-icon:hover { color: #d73532 !important; }
+	a.googleplus-icon:hover { color: #282927 !important; }
+	a.tumblr-icon:hover { color: #586980 !important; }
+	a.instagram-icon:hover { color: #82685a !important; }
+	a.rss-icon:hover { color: #f79638 !important; }
+	a.linkedin-icon:hover { color: #018faf !important; }
+	a.skype-icon:hover { color: #00b0f6 !important; }
+	a.flickr-icon:hover { color: #0061db !important; }
+	a.vimeo-icon:hover { color: #63879c !important; }
+	a.github-icon:hover { color: #3b3b3b !important; }
+	a.youtube-icon:hover { color: #cc181e !important; }
+	a.windows-icon:hover { color: #6dc2e9 !important; }
+	a.dropbox-icon:hover { color: #007ee5 !important; }
+	a.xing-icon:hover { color: #026566 !important; }	
+	a.adn-icon:hover { color: #1ea076 !important; }
+	a.android-icon:hover { color: #98cb02 !important; }
+	a.apple-icon:hover { color: #000000 !important; }
+	a.behance-icon:hover { color: #2d9ad2 !important; }
+	a.bitbucket-icon:hover { color: #214f81 !important; }
+	a.bitcoin-icon:hover { color: #f7931b !important; }
+	a.codepan-icon:hover { color: #000000 !important; }
+	a.css3-icon:hover { color: #3289ce !important; }
+	a.delicious-icon:hover { color: #3399fe !important; }
+	a.deviantart-icon:hover { color: #c8da30 !important; }
+	a.digg-icon:hover { color: #0080c2 !important; }
+	a.drupal-icon:hover { color: #0077b9 !important; }
+	a.empire-icon:hover { color: #000000 !important; }
+	a.foursquare-icon:hover { color: #daecb0 !important; }
+	a.git-icon:hover { color: #f34f29 !important; }
+	a.gitti-icon:hover { color: #634c3e !important; }
+	a.hacker-news-icon:hover { color: #f18642 !important; }
+	a.html5-icon:hover { color: #e54c1f !important; }
+	a.joomla-icon:hover { color: #016fb9 !important; }
+	a.jsfiddle-icon:hover { color: #4679a4 !important; }
+	a.linux-icon:hover { color: #fece0e !important; }
+	a.maxcdn-icon:hover { color: #f36f20 !important; }
+	a.openid-icon:hover { color: #fe6101 !important; }
+	a.pagelines-icon:hover { color: #3783e3 !important; }
+	a.pied-piper-icon:hover { color: #0c7b48 !important; }
+	a.qq-icon:hover { color: #23286c !important; }
+	a.rebel-icon:hover { color: #000000 !important; }
+	a.reddit-icon:hover { color: #cee3f8 !important; }
+	a.renren-icon:hover { color: #0d81e4 !important; }
+	a.share-icon:hover { color: #252525 !important; }
+	a.slack-icon:hover { color: #453744 !important; }
+	a.soundcloud-icon:hover { color: #fe4e00 !important; }
+	a.spotify-icon:hover { color: #80bb41 !important; }
+	a.stack-exchange-icon:hover { color: #265a93 !important; }
+	a.stackoverflow-icon:hover { color: #fea501 !important; }
+	a.steam-icon:hover { color: #191919 !important; }
+	a.stumbleupon-icon:hover { color: #f04f23 !important; }
+	a.tencent-weibo-icon:hover { color: #0063a7 !important; }
+	a.trello-icon:hover { color: #226784 !important; }
+	a.vine-icon:hover { color: #00b081 !important; }
+	a.vk-icon:hover { color: #50769d !important; }
+	a.wechat-icon:hover { color: #a4dc31 !important; }
+	a.weibo-icon:hover { color: #d82828 !important; }
+	a.wordpress-icon:hover { color: #454442 !important; }
+	a.yahoo-icon:hover { color: #4b04a8 !important; }
+
+/* ==========================================================================
+   =Tabs
+   ========================================================================== */
+
+	.nav-tabs { margin-bottom: 10px; }
+	
+	.nav-tabs .nav-link {
+		padding: 10px 20px;
+		border-radius: 0;
+	}
+	
+	.tab-content { margin-bottom: 30px; }
+
+/* ==========================================================================
+   =Portfolio Item
+   ========================================================================== */
+	
+	.portfolio-item { 
+		position: relative; 
+		margin-bottom: 50px;
+	}
+	
+	.portfolio-item-preview { position: relative; }
+	
+	.portfolio-item-preview > img {
+		display: block;
+		width: 100%;
+	}
+	
+	.portfolio-item-overlay {
+		position: absolute; 
+		top: 0; 
+		right: 0; 
+		bottom: 0; 
+		left: 0; 
+		background-color: rgba(0, 123, 255, .7);
+		opacity: 0;
+		-webkit-transition: all .3s linear;
+				transition: all .3s linear;
+	}
+	
+	.portfolio-item-overlay:hover { opacity: 1; }	
+		
+	.portfolio-item-overlay-actions {
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+		margin-top: -30px;
+		text-align: center;
+	}
+	
+	.portfolio-item-overlay-actions .portfolio-item-zoom,
+	.portfolio-item-overlay-actions .portfolio-item-link {
+		display: inline-block;
+		padding: 10px; 
+		margin: 0 5px;
+	}
+	
+	.portfolio-item-overlay-actions .portfolio-item-zoom i,
+	.portfolio-item-overlay-actions .portfolio-item-link i {
+		color: #fff; 
+		font-size: 20px; 
+		line-height: 40px; 
+	}
+	
+	.portfolio-item-overlay .portfolio-item-description {
+		position: absolute;
+		bottom: 30px;
+		left: 0;
+		width: 100%;
+		color: #fff;
+		text-align: center;
+	}
+	
+	.portfolio-item-preview + .portfolio-item-description { margin-top: 30px; }
+	
+/* ==========================================================================
+   =Portfolio Filter
+   ========================================================================== */
+	
+	.portfolio-filter ul {
+		margin-bottom: 50px;
+		list-style: none;
+		text-align: center;
+	}
+	
+	.portfolio-filter ul li { 
+		display: block;
+		margin-bottom: 10px;
+	}
+	
+	.portfolio-filter ul li a { 
+		text-decoration: none; 
+		display: block;
+		font-size: 18px;
+		color: #303030;
+		font-family: 'Josefin Sans', sans-serif;
+		font-weight: 600;
+	}
+	
+	.portfolio-filter ul li a:hover,
+	.portfolio-filter ul li a.active { color: #007bff; }	
+	
+	@media (min-width: 768px) {
+		
+		.portfolio-filter ul { margin-bottom: 100px; }
+		
+		.portfolio-filter ul li { 
+			display: inline-block; 
+			margin-right: 20px;
+			margin-bottom: 0;
+		}
+		
+		.portfolio-filter ul li a { display: inline-block; }
+		
+		.portfolio-filter ul li:last-child { margin-right: 0; }
+		
+	}
+
+/* ==========================================================================
+   =Portfolio Grid
+   ========================================================================== */
+
+   .portfolio-grid {
+		margin-bottom: 60px;
+		list-style: none;
+	}
+	
+	.portfolio-grid.gutter { margin: -15px -15px 60px -15px; }
+	
+	.portfolio-grid .item {
+		float: left;
+		width: 33.3333333%;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+	}
+	
+	.portfolio-grid.gutter .item { padding: 15px; }
+	
+	.portfolio-grid .portfolio-item { margin-bottom: 0; }
+	
+	.portfolio-grid.three-cols .item { width: 33.333333333%; } 
+	.portfolio-grid.four-cols .item { width: 25%; } 
+	.portfolio-grid.five-cols .item { width: 25%; } 
+	
+	/*
+	 * 1. Clearfix hack 
+	 */
+	.portfolio-grid:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		font-size: 0;
+		content: " ";
+		clear: both;		
+	}
+	
+	@media (min-width: 1200px) {
+		
+		.portfolio-grid.five-cols .item { width: 20%; } 
+		
+	}
+	
+	@media (min-width: 768px) and (max-width: 991px) {
+		
+		.portfolio-grid.four-cols .item,
+		.portfolio-grid.five-cols .item { width: 33.3333333333%; } 
+		
+	}
+	
+	@media (max-width: 767px) {
+		
+		.portfolio-grid .item {
+			float: none;
+			width: 100%; 
+		}
+		
+		.portfolio-grid.three-cols .item,
+		.portfolio-grid.four-cols .item,
+		.portfolio-grid.five-cols .item { width: 100%; }
+		
+	}
+	
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		
+		.portfolio-grid .item {
+			float: left;
+			width: 50%; 
+		}
+		
+		.portfolio-grid.three-cols .item,
+		.portfolio-grid.four-cols .item,
+		.portfolio-grid.five-cols .item { width: 50%; }
+		
+	}
+   
+/* ==========================================================================
+   =Portfolio Strip
+   ========================================================================== */
+   
+   .portfolio-strip {
+		margin-bottom: 30px;
+		list-style: none;
+	}
+	
+	.portfolio-strip .item {
+		float: left;
+		width: 25%;
+	}
+	
+	.portfolio-strip .item:last-child { display: none; }
+	
+	.portfolio-strip .portfolio-item { margin-bottom: 0; } 
+	
+	/*
+	 * 1. Clearfix hack 
+	 */
+	.portfolio-strip:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		font-size: 0;
+		content: " ";
+		clear: both;		
+	}
+	
+	@media (min-width: 1200px) {
+		
+		.portfolio-strip .item { width: 20%; }
+		.portfolio-strip .item:last-child { display: block; } 
+		
+	}
+	
+	@media (min-width: 768px) and (max-width: 991px) {
+		
+		.portfolio-strip .item { width: 33.3333333333%; }
+		.portfolio-strip .item:last-child { display: block; } 
+		
+	}
+	
+	@media (max-width: 767px) {
+		
+		.portfolio-strip .item {
+			float: none;
+			width: 100%; 
+		}
+		
+		.portfolio-strip .item:last-child { display: block; } 
+		
+	}
+	
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		
+		.portfolio-strip .item {
+			float: left;
+			width: 50%; 
+		}
+		
+	}
+
+/* ==========================================================================
+   =Owl Carousel
+   ========================================================================== */
+	
+	.owl-carousel {
+		margin-bottom: 50px;
+	}
+	
+	.owl-pagination {
+		position: absolute;
+		bottom: 30px;
+		left: 0;
+		width: 100%; 
+		text-align: center;
+	}
+	
+	.owl-page {
+		display: inline-block;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		margin-right: 5px;
+		background-color: #fff;
+	}
+	
+	.owl-page:hover,
+	.owl-page.active { background-color: #000; }
+	
+	.owl-page:last-child { margin-right: 0; }
+	
+	.owl-prev,
+	.owl-next {
+		position: absolute;
+		top: 50%;
+		width: 32px;
+		height: 32px;
+		background: #fff no-repeat center center;
+		-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+				transform: translateY(-50%);
+	}
+	
+	.owl-prev {
+		left: 0;
+		background-image: url(../images/prev.png);
+	}
+	
+	.owl-next {
+		right: 0;
+		background-image: url(../images/next.png);
+	}
+	
+	.owl-dots { 
+		margin-top: 30px;
+		text-align: center; 
+	}
+	
+	.owl-dots .owl-dot { display: inline-block; }
+	
+	.owl-dots .owl-dot.active span { background-color: #007bff; }
+	
+	.owl-dots .owl-dot span {
+		background-color: #ecf0f1;
+		border-radius: 0;
+		display: inline-block;
+		height: 10px;
+		width: 10px;
+		margin: 0 5px;
+		border-radius: 50%;
+		-webkit-transition: opacity 0.2s ease 0s;
+				transition: opacity 0.2s ease 0s;
+	}
+	
+/* ==========================================================================
+   =Work experience
+   ========================================================================== */	
+
+	.work-experience-section { 
+		display: block; 
+		margin-bottom: 50px;
+	}
+	
+	.work-experience-section-2 {}
+	
+	.work-experience-section .section-title { margin-bottom: 30px; }
+	
+	.work-experience-section.style-2 .section-title {}
+	
+	.work-experience-section .position { margin-bottom: 10px; }
+	
+	.work-experience-section .company {}
+
+	.work-experience-section .period {
+		margin-bottom: 10px;
+		color: #007bff;
+		font-weight: 700;
+		font-size: 16px;
+	}
+
+	.work-experience-section .section-content {}
+	
+	.work-experience-section.style-2 .section-content {}
+
+	@media (min-width: 768px) {
+		
+		.work-experience-section {
+			display: flex;
+		}
+		
+		.work-experience-section .section-title {
+			width: 50%;
+			padding-right: 35px;
+			margin-bottom: 0;
+			text-align: right;
+		}
+		
+		.work-experience-section.style-2 .section-title {
+			text-align: left;
+			width: 30%;
+		}
+		
+		.work-experience-section .section-content {
+			padding-left: 35px;
+			border-left: 2px solid #e9ecef;
+		}
+		
+		.work-experience-section.style-2 .section-content { width: 70%; }
+		
+		
+	} 
+	
+/* ==========================================================================
+   =Fullwidth section
+   ========================================================================== */		
+	
+	.fullwidth-section.custom-color-selected { background-color: #f7f7f7; }	
+
+		
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   

@@ -1,0 +1,333 @@
+/**
+ * 	Name: elements.css 
+ *  
+ *  
+ *
+ *	T.O.C
+ *
+ *	=Typography
+ *	=Links
+ *	=Lists
+ *	=Images
+ *	=Tables
+ *	=Forms
+ *	
+ *
+ */
+ 
+/* ==========================================================================
+   =Typography
+   ========================================================================== */
+
+    html { font-size: 14px; }
+   
+	body {
+		font-family: "Open Sans", Arial, sans-serif;
+		font-size: 14px;
+		background-color: #ffffff;
+		color: #303030;
+		word-spacing: 1px;
+		line-height: 28px;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-bottom: 0;
+		font-family: 'Josefin Sans', sans-serif;
+		font-weight: 600;
+	}
+	
+	h1, .h1 {
+		font-size: 32px;
+		line-height: 48px;
+	}
+	
+	h2, .h2 {
+		font-size: 28px;
+		line-height: 42px;
+	}
+	
+	h3, .h3 {
+		font-size: 24px;
+		line-height: 36px;
+	}
+	
+	h4, .h4 {
+		font-size: 18px;
+		line-height: 27px;
+	}
+	
+	h5, .h5 {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	
+	h6, .h6 {
+		font-size: 14px;
+		line-height: 21px;
+	}
+	
+	.display-1 {
+		font-size: 40px;
+		font-weight: 600;
+		line-height: 60px;
+	}
+
+	.display-2 {
+		font-size: 46px;
+		font-weight: 600;
+		line-height: 72px;
+	}
+
+	.display-3 {
+		font-size: 60px;
+		font-weight: 600;
+		line-height: 90px;
+	}
+	
+	.display-4 {
+		font-size: 70px;
+		font-weight: 600;
+		line-height: 105px;
+	}
+	
+	h1 a, 
+	h2 a, 
+	h3 a, 
+	h4 a, 
+	h5 a, 
+	h6 a { color: #303030; }
+	
+	h1 a:hover, 
+	h2 a:hover, 
+	h3 a:hover, 
+	h4 a:hover, 
+	h5 a:hover, 
+	h6 a:hover { 
+		text-decoration: none; 
+		color: #007bff;
+	}
+
+	p {
+		margin-bottom: 20px;
+	}
+	
+	hr { 
+		margin: 30px 0;
+		border-width: 2px 0 0;
+	}
+	
+	mark,
+	.mark {
+		padding: 0.3em;
+		background-color: #fcf8e3;
+	}
+	
+	.blockquote {
+		margin-bottom: 20px;
+		font-size: 16px;
+	}
+
+	.blockquote-footer {
+		font-size: 90%;
+		color: #868e96;
+	}
+
+	.blockquote-footer:before {
+		content: "\2014 \00A0";
+	}
+	
+	.last { 
+		margin-bottom: 0 !important; 
+	}
+
+/* ==========================================================================
+   =Links
+   ========================================================================== */
+	
+	a {
+		color: #007bff;
+		text-decoration: none;
+		-webkit-transition: color .3s linear;
+				transition: color .3s linear;
+	}
+	
+	a:hover, 
+	a:focus {
+		color: #007bff;
+		outline: 0; 
+		text-decoration: none;
+		cursor: pointer;
+	}	
+
+/* ==========================================================================
+   =Lists
+   ========================================================================== */
+	
+	ul, 
+	ol { 
+		margin-bottom: 20px;
+		padding: 0;
+		list-style-position: inside; 
+	}
+	 
+	ul ul,
+	ol ol,
+	ul ol 
+	ol ul { margin-left: 30px; }
+	
+	li {}
+	
+	dl { margin-bottom: 20px; }
+
+	dt {}
+
+	dd  { margin-bottom: 20px; }
+
+/* =Custom lists
+   ========================================================================== */	
+
+	/**
+ 	 * Custom lists
+ 	 *
+	 * 1. unstyled list
+	 * 2. list with squares for bullets
+	 * 3. list with discs for bullets
+	 *
+	 */
+	 
+	ul.unstyled { list-style-type: none; } /* 1 */
+	ul.square { list-style-type: square; } /* 2 */
+	ul.circle { list-style-type: circle; } /* 3 */
+	
+	/**
+ 	 * FontAwesome lists
+ 	 *
+	 * 1. Check list
+	 * 2. Plus list
+	 * 3. Pin list
+	 *
+	 */
+	 
+	ul.check,					    /* 1 */
+	ul.plus,						/* 2 */
+	ul.pin { list-style: none; }	/* 3 */
+	
+	ul.check li:before,
+	ul.plus li:before,
+	ul.pin li:before { 
+		position: relative;
+		top: -1px;
+		width: auto;
+		height: auto;
+		margin-right: 8px;
+		color: #111;
+		font-family: 'FontAwesome';
+		font-size: 10px;
+		font-style: normal;
+	}
+	
+	ul.check li:before { content: "\f00c"; }
+	ul.plus li:before { content: "\f067"; }
+	ul.pin li:before { content: "\f08d"; }	
+	
+	/**
+ 	 * Custom Icon Font lists
+ 	 *
+	 * 1. Arrow list
+	 *
+	 */
+	
+	ul.arrow { list-style: none; }	/* 1 */
+	
+	ul.arrow li:before { 
+		position: relative;
+		top: 0;
+		width: auto;
+		height: auto;
+		margin-right: 8px;
+		font-family: 'iconfontcustom';
+		font-size: 12px;
+		font-weight: 400;
+	}
+	
+	ul.arrow li:before { content: "\e7b0"; }	
+
+/* ==========================================================================
+   =Images
+   ========================================================================== */
+	
+	img { max-width: 100%; }
+	
+	.img-thumbnail { 
+		padding: 5px; 
+		border-radius: 0;
+	}
+
+/* ==========================================================================
+   =Tables
+   ========================================================================== */
+
+	.table { margin-bottom: 30px; }
+
+	.table th,
+	.table td {
+		padding: 15px;
+	}
+	
+	.table thead th {}
+
+	.table tbody + tbody {}
+
+	.table .table {}
+
+	.table-bordered {}
+
+	.table-bordered th,
+	.table-bordered td {}
+
+	.table-bordered thead th,
+	.table-bordered thead td {}
+	
+	table.personal-details th {
+		font-weight: 600; 
+	}
+
+/* ==========================================================================
+   =Forms
+   ========================================================================== */
+
+    .form-group { margin-bottom: 20px; }
+   
+	.form-control {
+		margin-bottom: 20px;
+		padding: 10px;
+		border: 1px solid rgba(0, 0, 0, 0.15);
+		border-radius: 0;
+		font-size: 14px;
+	}
+	
+	.form-control:focus {
+		background-color: #ffffff;
+		border-color: #80bdff;
+	}
+	
+	.form-control::-webkit-input-placeholder {}
+
+	.form-control:-ms-input-placeholder {}
+
+	.form-control::placeholder {}
+	
+	.input-group { margin-bottom: 20px; }
+	
+	.input-group-btn > .btn {
+		margin-bottom: 0;
+		padding: 10px;
+    }
+   
+   select.form-control:not([size]):not([multiple]) { height: auto; }
+

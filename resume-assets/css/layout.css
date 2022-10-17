@@ -1,0 +1,549 @@
+/**
+ * 	Name: layout.css
+ *
+ *  Styling for the layout of the pages - header, footer, page sections etc.
+ *
+ *  T.O.C
+ *
+ *	=Wrap
+ *	=Header Top
+ *	=Header
+ *	=Logo
+ *	=Menu
+ *		=Menu Basics
+ *		=Menu Skin
+ *		=DropDown
+ *		=Menu Arrows
+ *	=Mobile Menu 
+ *	=Mobile menu trigger
+ *	=Custom search form 
+ *	=Content
+ *	=Page Header
+ *	=Fullwidth Section
+ *	=Footer Top
+ *	=Footer
+ *	=Footer Bottom
+ *	=Back to top
+ *	=Misc 
+ *
+ */
+ 
+/* ==========================================================================
+   =Wrap
+   ========================================================================== */
+
+	#wrap {
+		position: relative;
+		background-color: #fff;
+	}
+	
+	@media (max-width: 767px) {
+
+		#wrap {}
+
+	}
+
+/* ==========================================================================
+	=Header Top
+	========================================================================== */
+   
+   #header-top {
+		padding: 10px 0;
+		background-color: #007bff;
+   }
+   
+   @media (max-width: 767px) {
+
+		#header-top {}
+
+	}
+   
+/* ==========================================================================
+   =Header 
+   ========================================================================== */
+	
+	#header { 
+		position: relative;
+	}
+	
+	#header [class^="col-"] { position: static; }
+	
+	#header .container { position: relative; }
+	
+/* ==========================================================================
+   =Logo
+   ========================================================================== */
+	
+	#logo {}
+	
+	#logo a {
+		display: inline-block;
+		text-decoration: none;
+	}
+
+/* ==========================================================================
+   =Menu 
+   ========================================================================== */
+
+/* =Menu Basics
+   ========================================================================== */
+   
+	.sf-menu,
+	.sf-menu ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	
+	.sf-menu > li { float: left; }
+
+	.sf-menu > li > a {
+		position: relative;
+		display: block;
+	}
+
+	.sf-menu li.dropdown ul {
+		position: absolute;
+		z-index: 1025;		/* 1 */
+		top: 100%;
+		left: 0;
+		display: none;
+	}
+	
+	.sf-menu li:last-child ul {
+		right: 0;
+		left: auto;
+	}
+	
+	.sf-menu li.dropdown { position: relative; }
+	
+	.sf-menu li.dropdown ul ul {
+		top: 0;
+		left: 100%;
+	}
+	
+	.sf-menu li:last-child ul ul {
+		left: auto;
+		right: 100%;
+	}
+
+	.sf-menu li.dropdown:hover > ul,
+	.sf-menu li.dropdown.sfHover > ul { display: block; }
+
+/* =Menu Skin
+   ========================================================================== */
+	
+	.sf-menu { float: right; } 
+	
+	.sf-menu a {
+		display: block;
+		border-bottom: 1px dotted rgba(0, 0, 0, 0.15);
+		text-decoration: none;
+		color: #303030;
+		-webkit-transition: color .2s;
+				transition: color .2s;
+	}
+	
+	.sf-menu li.pro-feature { position: relative; }
+	
+	.sf-menu li.pro-feature:before {
+		display: inline-block;
+		position: absolute;
+		top: 3px;
+		right: 3px;
+		content: "Pro";
+		padding: 0 3px 3px 3px;
+		background-color: #ef3e3b;
+		border-radius: 3px;
+		color: #ffffff;
+		line-height: 1;
+		font-size: 12px;
+	}
+
+	.sf-menu li:last-child > a { border-bottom: none; }
+	
+	.sf-menu > li > a,
+	.sf-menu > li.dropdown > a {
+		border: none;
+		padding: 36px 15px;
+		-webkit-transition: all 0.3s;
+				transition: all 0.3s;
+	}
+	
+	.sf-menu > li:last-child > a,
+	.sf-menu > li.dropdown:last-child > a { margin-right: 0; }
+	
+	.sf-menu > li a i { margin-right: 5px; }
+	
+	.sf-menu > li.current > a,
+	.sf-menu li.sfHover > a,
+	.sf-menu a:hover,
+	.sf-menu li.sfHover a:hover {
+		color: #007bff;
+		text-decoration: none;	
+	}
+
+/* =DropDown
+   ========================================================================== */
+	
+	/**
+ 	 * 1. allow long menu items to determine submenu width
+ 	 */
+	
+	.sf-menu li.dropdown ul {
+		min-width: 180px; 	/* 1 */
+		background-color: #ffffff;
+		box-shadow: 0px 4px 10px -2px rgba(44,62,80,0.62);	
+	}
+
+	.sf-menu > li.dropdown > ul {}	
+	
+	.sf-menu li.dropdown ul a { padding: 10px 15px; } 
+	
+	@media (min-width: 768px) and (max-width: 991px) {
+
+		#menu { display: none; }
+
+	}
+	
+	@media (max-width: 767px) {
+
+		#menu { display: none; }
+
+	}
+	
+/* ==========================================================================
+   =Mobile Menu 
+   ========================================================================== */
+			
+	#mobile-menu {
+		border-bottom: 1px solid #e0e0e0;
+		margin-bottom: 0;
+	}
+	
+	#mobile-menu li {	
+		display: block;
+		margin: 0;
+	}
+	
+	#mobile-menu li.search-item { display: none; }
+		
+	#mobile-menu > li > ul, 
+	#mobile-menu > li > ul > li > ul {
+		display: none;
+		margin-left: 0;
+	}
+
+	#mobile-menu li a {
+		position: relative;
+		display: block;
+		padding: 15px 25px;
+		border-top: 1px solid #e0e0e0;
+		color: #111;
+		font-size: 13px;
+		text-align: left;
+		text-decoration: none;
+	}
+	
+	#mobile-menu ul a { padding-left: 45px; }
+	
+	#mobile-menu ul li ul a  { padding-left: 65px; }
+	
+	#mobile-menu .mobile-menu-submenu-arrow {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 70px;
+		height: 100%;
+		border-left: 1px solid #e0e0e0;
+		color: #111;
+		font-size: 20px;
+		line-height: 50px;
+		text-align: center;
+		cursor: pointer;
+	}
+	
+	#mobile-menu .mobile-menu-submenu-arrow:hover { background-color: #f3f3f3; }
+	
+	#mobile-menu li a:hover {}
+	
+	#mobile-menu { display: none; }
+
+/* ==========================================================================
+   =Mobile menu trigger
+   ========================================================================== */
+				
+	#mobile-menu-trigger { 
+		float: right;
+		display: none;
+		font-size: 32px;
+		color: #007bff;
+	}
+
+	@media (max-width: 991px) {
+
+		#mobile-menu-trigger { 
+			display: block;
+			position: absolute;
+			top: 50%;
+			right: 15px;
+			display: block;
+			padding: 10px;
+			margin-top: 0;
+			-webkit-transform: translateY(-50%);
+				-ms-transform: translateY(-50%);
+					transform: translateY(-50%);
+		}
+
+	}	
+		
+/* ==========================================================================
+   =Custom search form 
+   ========================================================================== */
+	
+	#custom-search-button {}
+	
+	/**
+ 	 * 1. z-index is 1030 because the menu has a z-index of 1025 
+ 	 */
+	 
+	#custom-search-form {
+		position: absolute;
+		z-index: 1030; 	/* 1 */
+		top: 87px;
+		right: 5px;
+		display: none;
+	}
+
+	#custom-search-form:before {
+		position: absolute; 
+		z-index: 1; 
+		top: -9px; 
+		right: 10px; 
+		width: 0; 
+		height: 0;
+		border-right: 7px solid transparent; 
+		border-bottom: 10px solid #e0e0e0; 
+		border-left: 7px solid transparent; 
+		content: "";
+	}
+	
+	#custom-search-form:after {
+		position: absolute;
+		z-index: 2; 
+		top: -7px; 
+		right: 10px; 
+		width: 0; 
+		height: 0; 
+		border-right: 7px solid transparent; 
+		border-bottom: 10px solid #fff; 
+		border-left: 7px solid transparent; 
+		content: "";
+	}
+	
+	#custom-search-submit { display: none; }
+	
+	#custom-search-form #s {
+		width: 220px;
+		padding: 8px 10px;
+		border-radius: 0;	
+		background-color: #fff; 
+	}
+	
+	#custom-search-form #s:focus { border-color: #e0e0e0; }
+	
+/* ==========================================================================
+   =Content
+   ========================================================================== */
+   	
+	#content { padding-bottom: 70px; }	
+	
+	#content.padding-top { padding-top: 100px; }
+	
+	#content.no-padding { padding: 0; }
+
+/* ==========================================================================
+   =Page Header
+   ========================================================================== */
+   	
+	#page-header { 
+		padding: 50px 0;
+		margin-bottom: 100px;
+		background-color: #007bff; 
+		text-align: center;
+	}
+	
+	#page-header h1,
+	#page-header h3 { color: #ffffff; }
+	
+	#page-header h3 { 
+		margin-bottom: 0; 
+		font-size: 20px;
+	}
+
+/* ==========================================================================
+   =Fullwidth Section
+   ========================================================================== */
+   
+    /**
+ 	 * Full width section
+ 	 *
+	 * 1. background-image must be supplied using inline css as it is different for every .fullwidth-section
+	 *
+	 */
+	 
+   .fullwidth-section {
+		position: relative;
+		overflow: hidden;
+		z-index: 0;	
+		padding: 80px 0;
+		margin-bottom: 40px;
+		background-color: #f3f3f3;
+		background-attachment: scroll;
+		background-repeat: no-repeat; /* 1 */ 
+		background-position: 50% 0;		
+	}
+
+	.fullwidth-section-content {
+		position: relative;
+		z-index: 3;
+	}
+   
+   	.fullwidth-section-overlay {
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-repeat: repeat;
+		background-position: 0 0;	
+	}
+	
+	.fullwidth-section-video {
+		position: absolute;
+		overflow: hidden;
+		z-index: 1;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+	
+	.yt-player { display: none; }
+	
+	/**
+ 	 *
+	 * 1. We add background-size cover so the parallax looks ok if you provide stuck images
+	 *
+	 */
+	
+	.parallax.parallax-enabled { 
+		background-attachment: fixed !important;
+		-webkit-background-size: cover;
+				background-size: cover;	/* 1 */
+	}
+	
+	.horizontal-parallax { background-repeat: repeat-x; }
+	
+	.animated-parallax { background-repeat: repeat-x; }
+	
+	@media (max-width: 767px) {
+
+		.fullwidth-section {
+			-webkit-background-size: cover;
+					background-size: cover;		
+		}
+		
+	}
+	
+/* ==========================================================================
+   =Footer Top
+   ========================================================================== */
+
+	#footer-top { background-color: #f9f9f9; }
+	
+	#footer-top-widget-area-1 {}
+	#footer-top-widget-area-2 {}
+	#footer-top-widget-area-3 {}
+	#footer-top-widget-area-4 {}
+   
+/* ==========================================================================
+   =Footer
+   ========================================================================== */		
+	
+	#footer { 
+		padding: 20px 0;	
+		background-color: #007bff;
+		color: #ffffff;
+		text-align: center;
+	}
+	
+	#footer a { color: #ffffff; }
+	
+	#footer-widget-area-1 {}
+	#footer-widget-area-2 {}
+	#footer-widget-area-3 {}
+	#footer-widget-area-4 {}
+	
+/* ==========================================================================
+   =Footer Bottom
+   ========================================================================== */	
+  
+	#footer-bottom { 
+		padding: 15px 0;	
+		background-color: #f3f3f3;	
+	}
+	
+	#footer-bottom-widget-area-1 {}
+	#footer-bottom-widget-area-2 {}
+	#footer-bottom-widget-area-3 {}
+	#footer-bottom-widget-area-4 {}
+	
+/* ==========================================================================
+   =Back to top
+   ========================================================================== */
+
+	#back-to-top {
+		position: fixed;
+		z-index: 1010;
+		right: -40px;
+		bottom: 20px;
+		width: 40px;
+		height: 40px;
+		background-color: #111;
+		color: #fafafa;
+		font-size: 30px;
+		line-height: 40px;
+		text-align: center;					
+		opacity: 0.5;
+		cursor: pointer;
+		-webkit-transition: all 0.4s ease 0s;
+				transition: all 0.4s ease 0s;
+	}
+	
+	#back-to-top i {
+		font-size: 24px;
+		line-height: 40px;
+		font-weight: normal;
+		vertical-align: top;
+		-webkit-transition: all 0.4s ease 0s;
+				transition: all 0.4s ease 0s;
+	}
+	
+	#back-to-top:hover { background-color: rgba(0, 0, 0, 0.7); }
+	#back-to-top:hover i { color: #fff; }
+	#back-to-top.visible { right: 40px; }
+	#back-to-top.gone { right: -40px; }	
+
+/* ==========================================================================
+   =Misc
+   ========================================================================== */
+   
+	.javascript-required,
+	.modern-browser-required {
+	    padding: 15px 0;
+		background-color: #d50f25;
+		color: #fff;
+		font-weight: 700;
+		text-align: center;
+	}
