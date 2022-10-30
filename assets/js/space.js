@@ -18,6 +18,85 @@
 		return !!('ontouchstart' in window) || ( !! ('onmsgesturechange' in window) && !! window.navigator.maxTouchPoints);
 	}
 
+// bxSlider - responsive slider
+		// http://bxslider.com/options
+		
+		if(typeof $.fn.bxSlider !== 'undefined'){
+			
+			$('.image-rotator .slides').bxSlider({
+				 mode: 'fade',							// Type of transition between slides: 'horizontal', 'vertical', 'fade'		
+				 speed: 200,							// Slide transition duration (in ms)
+				 infiniteLoop: true,					// If true, clicking "Next" while on the last slide will transition to the first slide and vice-versa.
+				 hideControlOnEnd: false,				// If true, "Next" control will be hidden on last slide and vice-versa. Only used when infiniteLoop: false
+				 pager: false,							// If true, a pager will be added
+				 pagerType: 'full',						// If 'full', a pager link will be generated for each slide. If 'short', a x / y pager will be used (ex. 1/5)
+				 controls: false,						// If true, "Next" / "Prev" controls will be added
+				 auto: true,							// If true, slides will automatically transition
+				 pause: 4000,							// The amount of time (in ms) between each auto transition
+				 autoHover: false,						// Auto show will pause when mouse hovers over slider
+				 useCSS: false 							// If true, CSS transitions will be used for animations. False, jQuery animations. Setting to false fixes problem with jQuery 2.1.0 and mode:horizontal
+			});
+			
+			$('.images-slider .slides').bxSlider({
+				 mode: 'fade',							// Type of transition between slides: 'horizontal', 'vertical', 'fade'		
+				 speed: 500,							// Slide transition duration (in ms)
+				 infiniteLoop: true,					// If true, clicking "Next" while on the last slide will transition to the first slide and vice-versa.
+				 hideControlOnEnd: false,				// If true, "Next" control will be hidden on last slide and vice-versa. Only used when infiniteLoop: false
+				 pager: true,							// If true, a pager will be added
+				 pagerType: 'full',						// If 'full', a pager link will be generated for each slide. If 'short', a x / y pager will be used (ex. 1/5)
+				 controls: true,						// If true, "Next" / "Prev" controls will be added
+				 auto: true,							// If true, slides will automatically transition
+				 pause: 4000,							// The amount of time (in ms) between each auto transition
+				 autoHover: true,						// Auto show will pause when mouse hovers over slider
+				 useCSS: false 							// If true, CSS transitions will be used for animations. False, jQuery animations. Setting to false fixes problem with jQuery 2.1.0 and mode:horizontal
+			});
+			
+			$('.images-slider-2 .slides').bxSlider({
+				 mode: 'horizontal',					// Type of transition between slides: 'horizontal', 'vertical', 'fade'		
+				 speed: 500,							// Slide transition duration (in ms)
+				 infiniteLoop: true,					// If true, clicking "Next" while on the last slide will transition to the first slide and vice-versa.
+				 hideControlOnEnd: false,				// If true, "Next" control will be hidden on last slide and vice-versa. Only used when infiniteLoop: false
+				 pager: true,							// If true, a pager will be added
+				 pagerType: 'full',						// If 'full', a pager link will be generated for each slide. If 'short', a x / y pager will be used (ex. 1/5)
+				 controls: false,						// If true, "Next" / "Prev" controls will be added
+				 auto: true,							// If true, slides will automatically transition
+				 pause: 4000,							// The amount of time (in ms) between each auto transition
+				 autoHover: true,						// Auto show will pause when mouse hovers over slider
+				 useCSS: false 							// If true, CSS transitions will be used for animations. False, jQuery animations. Setting to false fixes problem with jQuery 2.1.0 and mode:horizontal
+			});
+			
+			$('.testimonial-slider .slides').bxSlider({
+				 mode: 'vertical',						// Type of transition between slides: 'horizontal', 'vertical', 'fade'		
+				 speed: 200,							// Slide transition duration (in ms)
+				 infiniteLoop: true,					// If true, clicking "Next" while on the last slide will transition to the first slide and vice-versa.
+				 hideControlOnEnd: false,				// If true, "Next" control will be hidden on last slide and vice-versa. Only used when infiniteLoop: false
+				 pager: true,							// If true, a pager will be added
+				 pagerType: 'full',						// If 'full', a pager link will be generated for each slide. If 'short', a x / y pager will be used (ex. 1/5)
+				 controls: false,						// If true, "Next" / "Prev" controls will be added
+				 auto: true,							// If true, slides will automatically transition
+				 pause: 4000,							// The amount of time (in ms) between each auto transition
+				 autoHover: true,						// Auto show will pause when mouse hovers over slider
+				 useCSS: false							// If true, CSS transitions will be used for animations. False, jQuery animations. Setting to false fixes problem with jQuery 2.1.0 and mode:horizontal
+			});
+			
+			$('.features-slider .slides').bxSlider({
+				 mode: 'fade',							// Type of transition between slides: 'horizontal', 'vertical', 'fade'		
+				 speed: 500,							// Slide transition duration (in ms)
+				 infiniteLoop: true,					// If true, clicking "Next" while on the last slide will transition to the first slide and vice-versa.
+				 hideControlOnEnd: false,				// If true, "Next" control will be hidden on last slide and vice-versa. Only used when infiniteLoop: false
+				 pager: true,							// If true, a pager will be added
+				 pagerType: 'full',						// If 'full', a pager link will be generated for each slide. If 'short', a x / y pager will be used (ex. 1/5)
+				 controls: true,						// If true, "Next" / "Prev" controls will be added
+				 auto: true,							// If true, slides will automatically transition
+				 pause: 4000,							// The amount of time (in ms) between each auto transition
+				 autoHover: true,						// Auto show will pause when mouse hovers over slider
+				 useCSS: false 							// If true, CSS transitions will be used for animations. False, jQuery animations. Setting to false fixes problem with jQuery 2.1.0 and mode:horizontal
+			});
+			
+		}
+				
+
+
 /* ==========================================================================
    setDimensionsPieCharts
    ========================================================================== */
@@ -424,7 +503,7 @@
 			var hash = window.location.hash;
 			
 			$(".loader-img").delay(500).fadeOut();
-			$("#page-loader").delay(4000).fadeOut("slow");
+			$("#page-loader").delay(1500).fadeOut("slow");
 			
 			if(!hash) { 
 				// Do nothing //
