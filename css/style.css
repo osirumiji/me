@@ -20,9 +20,19 @@
 13) BENY CURSOR
 
 
+
 /*--------------------------------f-------------------*/
 /*	01) BENY BASE
 /*---------------------------------------------------*/
+
+
+#particles-js {
+	width: 100%;
+	height: 100%;
+  	position: relative;
+  	z-index: 2;
+}
+
 
 html {
 	overflow-x: hidden;
@@ -38,6 +48,7 @@ body{
 	font-weight: 400;
 	background-color: #fff;
 	color: #7e7e7e;
+    cursor: none;
 }
 body::-webkit-scrollbar {
   width: 11px;
@@ -121,7 +132,7 @@ body.dark ::placeholder { /* Most modern browsers support this now. */
 h1, h2, h3, h4, h5, h6{
 	font-weight:500;
 	line-height: 1.3;
-	font-family: "Poppins";
+	font-family: "";
 	color: #000;
 }
 
@@ -319,10 +330,6 @@ body.dark .loader_line:after{
         width: 0%;
     }
 }
-#greeting{
-    color: #D6002F;
-}
-
 
 
 /*---------------------------------------------------*/
@@ -949,6 +956,12 @@ body.dark .loader_line:after{
 	color: #0F172A;
 	margin-bottom: 15px;
 }
+.beny_tm_title_holder h4{
+	font-size: 50px;
+	font-weight: 700;
+	color: #0F172A;
+	margin-bottom: 15px;
+}
 .beny_tm_about .about_inner{
 	width: 100%;
 	height: auto;
@@ -1034,182 +1047,6 @@ body.dark .loader_line:after{
 .beny_tm_about .list ul li p span{
 	color: #7e7e7e;
 	font-weight: 400;
-}
-
-/*---------------------------------------------------*/
-/*	06) BENY RESUME
-/*---------------------------------------------------*/
-
-.beny_tm_resume{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-}
-.beny_tm_resume .main_title{
-	width: 100%;
-	float: left;
-	margin-bottom: 75px;
-}
-.beny_tm_resume .main_title h3{
-	font-size: 40px;
-	font-weight: 700;
-	color: #0F172A;
-	text-align: center;
-}
-.beny_tm_resume .resume_inner{
-	width: 100%;
-	height: auto;
-	clear: both;
-	display: flex;
-}
-.beny_tm_resume .resume_inner .skills{
-	width: 50%;
-	padding-right: 125px;
-}
-.beny_tm_resume .resume_title{
-	width: 100%;
-	float: left;
-	position: relative;
-	overflow: hidden;
-}
-.beny_tm_resume .resume_title .svg{
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	left: 0px;
-	width: 30px;
-	height: 30px;
-	fill: none;
-	margin-top: -2px;
-}
-.beny_tm_resume .resume_title span{
-	display: inline-block;
-	position: relative;
-	text-transform: uppercase;
-	font-size: 30px;
-	color: #0F172A;
-	font-weight: 600;
-	padding-left: 60px;
-}
-.beny_tm_resume .resume_title span:before{
-	position: absolute;
-	content: "";
-	width: 1000px;
-	height: 1px;
-	background-color: #7E7E7E;
-	top: 50%;
-	transform: translateY(-50%);
-	left: 100%;
-	margin-left: 20px;
-}
-.tokyo_progress{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	padding-top: 50px;
-}
-.progress_inner{
-	width:100%;
-	margin-bottom:26px;
-}
-.progress_inner:last-child{
-	margin-bottom: 0px;
-}
-.progress_inner > span{
-	margin:0px 0px 4px 0px;
-	display:block;
-	text-align:left;
-	position: relative;
-}
-.progress_inner span.label{
-	opacity: 0;
-	transform: translateY(10px);
-	display: block;
-	color: #0F172A;
-	font-family: "Poppins";
-	font-size: 16px;
-	font-weight: 400;
-	
-	-webkit-transition: all .5s ease;
-	   -moz-transition: all .5s ease;
-	    -ms-transition: all .5s ease;
-	     -o-transition: all .5s ease;
-	        transition: all .5s ease;
-}
-.progress_inner span.label.opened{
-	opacity: 1;
-	transform: translateY(0px);
-}
-.progress_inner span.number{
-	float: right;
-	position: absolute;
-	right: 100%;
-	top: 50%;
-	transform: translateY(-50%);
-	transition: all 2s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* IE 10+ */
-	color: #7E7E7E;
-	font-family: "Poppins";
-	font-size: 16px;
-}
-.progress_inner .background{
-	background:#E2E2E2;
-	width:100%;
-	min-width:100%;
-	position:relative;
-	height:6px;
-	border-radius: 18px;
-}
-.progress_inner .background .bar_in{
-	height:100%;
-	background:#D6002F;
-	width:0px;
-	overflow:hidden;
-	border-radius: 18px;
-}
-.progress_inner .background .bar{
-	width:0px;
-	height:100%;
-}
-.progress_inner .background .bar.open{
-	-webkit-animation: wow 2s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* Safari 4+ */
-	-moz-animation:    wow 2s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* Fx 5+ */
-	animation:         wow 2s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* IE 10+ */
-	width:100%;	
-}
-
-@-webkit-keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
-@-moz-keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
-@keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
-
-.beny_tm_resume .education{
-	width: 50%;
-	padding-left: 125px;
-}
-.beny_tm_resume .edu_list{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	padding-top: 50px;
-}
-.beny_tm_resume .edu_list ul{
-	margin: 0px;
-	list-style-type: none;
-}
-.beny_tm_resume .edu_list ul li{
-	margin: 0px 0px 25px 0px;
-	width: 100%;
-	float: left;
-}
-.beny_tm_resume .edu_list ul li p{
-	font-size: 16px;
-	color: #7E7E7E;
-}
-.beny_tm_resume .edu_list ul li p span{
-	font-size: 18px;
-	color: #0F172A;
 }
 
 /*---------------------------------------------------*/
@@ -1525,7 +1362,7 @@ body.dark .loader_line:after{
 	height: auto;
 	clear: both;
 	float: left;
-	background-color: #F9F9FC;
+	background-color: #ffffff;
 	padding: 120px 0px 70px 0px;
 }
 .beny_tm_portfolio .portfolio_list{
@@ -2206,6 +2043,357 @@ body.modal{
 	height: 15px;
 }
 
+
+/*---------------------------------------------------*/
+/*	10) BENY NEWS
+/*---------------------------------------------------*/
+
+.beny_tm_recognitions{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	background-color: #F9F9FC;
+	padding: 120px 0px 90px 0px;
+}
+.beny_tm_recognitions  .recognitions_list{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding-top: 60px;
+}
+.beny_tm_recognitions ul{
+	margin: 0px 0px 0px -30px;
+	list-style-type: none;
+}
+.beny_tm_recognitions ul li{
+	margin: 0px 0px 30px 0px;
+	width: 33.3333%;
+	padding-left: 30px;
+	float: left;
+}
+.beny_tm_recognitions ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+}
+.beny_tm_recognitions ul li .image{
+	position: relative;
+	overflow: hidden;
+	border-radius: 8px;
+}
+.beny_tm_recodnitions ul li .image img{
+	position: relative;
+	min-width: 100%;
+	opacity: 0;
+}
+.beny_tm_recognitions ul li .image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position:center;
+	border-radius: 8px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.beny_tm_recognitions ul li .image:hover .main{
+	transform: scale(1.1);
+}
+.beny_tm_recognitions ul li .details{
+	width: 100%;
+	float: left;
+	padding-top: 9px;
+}
+.beny_tm_recognitions ul li .details span{
+	font-size: 16px;
+	display: inline-block;
+}
+.beny_tm_recognitions ul li .details span a{
+	text-decoration: none;
+	color: #7E7E7E;
+	position: relative;
+	display: inline-block;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.beny_tm_recognitions ul li .details span a:hover{
+	color: #D6002F;
+}
+.beny_tm_recognitions ul li .details span a:before{
+	position: relative;
+	content: ".";
+	font-size: 40px;
+	top: -3px;
+	color: #7e7e7e;
+	padding: 0px 5px;
+}
+.beny_tm_recognitions ul li .details .title a{
+	text-decoration: none;
+	color: #0F172A;
+	font-size: 22px;
+	font-weight: 700;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.beny_tm_recognitions ul li .details .title a:hover{
+	color: #D6002F;
+}
+.beny_tm_modalbox_service .description_wrap::-webkit-scrollbar,
+.beny_tm_modalbox_news .description_wrap::-webkit-scrollbar{
+  width: 11px;
+}
+.beny_tm_modalbox_service .description_wrap,
+.beny_tm_modalbox_news .description_wrap{
+  scrollbar-width: thin;
+  scrollbar-color: #999 #fff;
+}
+.beny_tm_modalbox_service .description_wrap:-webkit-scrollbar-track,
+.beny_tm_modalbox_news .description_wrap:-webkit-scrollbar-track{
+  background: #fff;
+}
+.beny_tm_modalbox_service .description_wrap::-webkit-scrollbar-thumb,
+.beny_tm_modalbox_news .description_wrap::-webkit-scrollbar-thumb{
+  background-color: #999;
+  border-radius: 6px;
+  border: 3px solid #fff;
+}
+.beny_tm_modalbox_recognitions{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 100vh;
+	z-index: 15;
+	background-color: rgba(0,0,0,.8);
+	opacity: 0;
+	visibility: hidden;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.beny_tm_modalbox_recognitions.opened{
+	opacity: 1;
+	visibility: visible;
+}
+.beny_tm_modalbox_recognitions .container{
+	height: 100vh;
+}
+.beny_tm_modalbox_recognitions .box_inner{
+	position: absolute;
+	top: 70px;
+	bottom: 70px;
+	width: 968px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #fff;
+	z-index: 1;
+	opacity: 0;
+	visibility: hidden;
+	margin-top: -20px;
+	transition-delay: .3s;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.beny_tm_modalbox_recognitions.opened .box_inner{
+	opacity: 1;
+	visibility: visible;
+	margin-top: 0px;
+}
+.beny_tm_modalbox_news .close{
+	position: fixed;
+	left: 100%;
+	top: 0px;
+	margin-left: 40px;
+	z-index: 111111;
+}
+.beny_tm_modalbox_recognitions .close a{
+	text-decoration: none;
+	color: #fff;
+}
+.beny_tm_modalbox_recognitions .close .svg{
+	width: 50px;
+	height: 50px;
+}
+.beny_tm_modalbox_recognitions .description_wrap{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+	padding: 50px;
+	overflow-y: scroll;
+}
+.beny_tm_modalbox_recognitions .details{
+	width: 100%;
+	float: left;
+	margin-bottom: 20px;
+}
+.beny_tm_modalbox_recognitions .description_wrap .image{
+	position: relative;
+	max-height: 450px;
+	z-index: -1;
+	margin-bottom: 40px;
+}
+.beny_tm_modalbox_news .description_wrap .image img{
+	min-width: 100%;
+	opacity: 0;
+}
+.beny_tm_modalbox_news .description_wrap .image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.beny_tm_modalbox_recognitions .details .title{
+	font-weight: 600;
+	font-size: 23px;
+	margin-bottom: 9px;
+}
+.beny_tm_modalbox_recognitions .details span{
+	font-size: 16px;
+	margin-bottom: 5px;
+	display: inline-block;
+}
+.beny_tm_modalbox_recognitions .details span a{
+	text-decoration: none;
+	color: #7E7E7E;
+	position: relative;
+	display: inline-block;
+}
+.beny_tm_modalbox_recognitions .details span a:before{
+	position: relative;
+	content: ".";
+	font-size: 40px;
+	top: -3px;
+	color: #7e7e7e;
+	padding: 0px 5px;
+}
+.beny_tm_recognitions .main_content{
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	z-index: -11;
+	display: none;
+}
+body.modal{
+	overflow-y: hidden;
+}
+.beny_tm_modalbox_recognitions .main_content{
+	width: 100%;
+	float: left;
+}
+.beny_tm_modalbox_recognitions .main_content .descriptions{
+	width: 100%;
+	float: left;
+	margin-bottom: 15px;
+}
+.beny_tm_modalbox_recognitions .main_content .descriptions .bigger{
+	color: #888;
+	font-size: 20px;		
+	margin-bottom: 31px;
+}
+.beny_tm_modalbox_news .main_content .descriptions p{
+	margin-bottom: 22px;
+}
+.beny_tm_modalbox_news .main_content .quotebox{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.beny_tm_modalbox_news .main_content .quotebox p{
+	font-size: 20px;
+	font-style: italic;
+	margin-bottom: 23px;
+	border-left: 2px solid #D6002F;
+	padding-left: 30px;
+	color: #000;
+}
+.beny_tm_modalbox_news .main_content .icon{
+	position: absolute;
+	left: 0px;
+	top: 10px;
+}
+.beny_tm_modalbox_news .main_content .icon .svg{
+	width: 50px;
+	height: 50px;
+}
+.beny_tm_modalbox_news .news_share{
+	width: 100%;
+	height: auto;
+	clear: both;
+	display: flex;
+	align-items: center;
+}
+.beny_tm_modalbox_news .news_share span{
+	font-family: "Montserrat";
+	font-weight: 600;
+	font-style: italic;
+	padding-right: 20px;
+	color: #000;
+}
+.beny_tm_modalbox_news .news_share ul{
+	margin: 0px;
+	list-style-type: none;
+	position: relative;
+}
+.beny_tm_modalbox_news .news_share ul li{
+	margin: 0px 12px 0px 0px;
+	display: inline-block;
+}  
+.beny_tm_modalbox_news .news_share ul li a{
+	text-decoration: none;
+	color: #000;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.beny_tm_modalbox_news .news_share ul li a:hover{
+	color: #D6002F;
+}
+.beny_tm_modalbox_news .news_share ul li .svg{
+	width: 15px;
+	height: 15px;
+}
+
+
+
 /*---------------------------------------------------*/
 /*	11) BENY CONTACT
 /*---------------------------------------------------*/
@@ -2446,7 +2634,7 @@ body.modal{
     box-sizing:border-box;
     z-index:100;
     opacity:.5;
-    transition:all .08s ease-out
+    transition:all .15s ease-out
 }
 .cursor-outer.cursor-hover{
     opacity:0
@@ -2481,10 +2669,6 @@ body.modal{
 	.beny_tm_about .about_inner{flex-direction: column;align-items: baseline;}
 	.beny_tm_about .about_inner .left{width: 100%;padding: 0px;margin-bottom: 50px;}
 	.beny_tm_about .about_inner .right{width: 100%;padding: 0px;}
-	.beny_tm_resume .resume_inner{flex-direction: column;align-items: baseline;}
-	.beny_tm_resume .resume_inner .skills{width: 100%;padding: 0px;margin-bottom: 75px;}
-	.beny_tm_resume .education{width: 100%;padding: 0px;}
-	.beny_tm_resume .resume_title span:before{display: none;}
 	.beny_tm_services ul li{width: 50%;}
 	.beny_tm_portfolio ul li{width: 50%;}
 	.beny_tm_testimonials .item .left{display: none;}
@@ -6369,7 +6553,8 @@ body.dark .loader_line:after{
     align-items:center;
     justify-content:space-between
 }
-.beny_tm_mobile_menu .mobile_in .logo img{
+.beny_tm_mobile_menu .mobile_in .logo img
+{
     max-width:70px
 }
 .my_trigger .hamburger-box{
@@ -7266,7 +7451,7 @@ body.dark .loader_line:after{
     height:auto;
     clear:both;
     float:left;
-    background-color:#f9f9fc;
+    background-color:rgb(255, 255, 255);
     padding:120px 0 90px
 }
 .beny_tm_portfolio .portfolio_list{
@@ -8149,13 +8334,13 @@ body.modal{
     visibility:hidden
 }
 .cursor-inner{
-    margin-left:-3px;
-    margin-top:-3px;
-    width:6px;
-    height:6px;
+    margin-left:-5px;
+    margin-top:-5px;
+    width:10px;
+    height:10px;
     z-index:100;
     background-color:#f52225;
-    transition:width .3s ease-in-out,height .3s ease-in-out,margin .3s ease-in-out,opacity .3s ease-in-out
+    transition:width .4s ease-in-out,height .4s ease-in-out,margin .4s ease-in-out,opacity .4s ease-in-out
 }
 .cursor-inner.cursor-hover{
     margin-left:-40px;
@@ -8166,15 +8351,15 @@ body.modal{
     opacity:.3
 }
 .cursor-outer{
-    margin-left:-15px;
-    margin-top:-15px;
-    width:30px;
-    height:30px;
-    border:2px solid #f52225;
+    margin-left:-20px;
+    margin-top:-20px;
+    width:40px;
+    height:40px;
+    border:20px solid #f52225;
     box-sizing:border-box;
     z-index:100;
     opacity:.5;
-    transition:all .08s ease-out
+    transition:all .8s ease-out
 }
 .cursor-outer.cursor-hover{
     opacity:0
@@ -9179,4 +9364,7 @@ body.intro .loader_line:after{
     background:#fff;
     border-radius:5px;
     margin-top:-6px
+}
+.text aos-init aos-animate{
+    color: #ffffff;
 }

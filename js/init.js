@@ -332,6 +332,26 @@ function beny_tm_cursor(){
 	}
 };
 
+
+
+function beny_hero_effect(){
+		
+	jQuery(window).on('scroll',function(){
+		var WinScroll			= jQuery(window).scrollTop();
+		var text				= jQuery(".beny_tm_third_hero .hero_texts");
+		var currentScroll		= window.pageYOffset;
+		text.css({'opacity' : (1 - (currentScroll/20) / 15)});
+		
+		if(WinScroll >= 400){
+			text.addClass('changed');
+		}else{
+			text.removeClass('changed');
+		}
+	});
+	
+}
+
+
 // -----------------------------------------------------
 // ---------------    IMAGE TO SVG    ------------------
 // -----------------------------------------------------
