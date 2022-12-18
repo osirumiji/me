@@ -213,7 +213,70 @@ leveraging technology to solve the world's challenges" />
 	  </div>
 	<!-- /MOBILE MENU -->
 	
+<!-- FAB -->
+	<div id="modal-write" class="modal">
+		<a href="#" class="modal-close"></a>
+		<div class="modal-content">
+		  <a href="#" class="modal-close"></a>
+		  <div class="modal-header">Send me a message</div>
+		  <div class="modal-body">
 
+			<form action="php/form.php" method="post">
+				<label for="modal-write-title">Name:</label><br>
+				<input type="text" id="name" name="name" placeholder=" Email..." required><br>
+				<label for="email">Email:</label><br>
+				<input type="text" id="email" name="email" placeholder=" Email..." required><br>
+				<label for="modal-write-title">Message subject:</label>
+			<input type="text" name="title" id="modal-write-title" placeholder=" Subject..." required>
+				<label for="modal-write-body">Message Body:</label><br>
+				<textarea name="message" cols="30" rows="10" id="message" placeholder="What would you like to say?" required></textarea><br>
+				<input type="submit" class="write" value="Submit">
+			  </form>
+
+		  </div>
+		</div>
+	  </div>
+	  <div id="modal-archive" class="modal">
+		<a href="#" class="modal-close"></a>
+		<div class="modal-content">
+		  <a href="#" class="modal-close"></a>
+		  <div class="modal-header">Set up a meeting</div>
+		  <div class="modal-body">
+			
+			<!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/osirumiji?hide_gdpr_banner=1" style="min-width:320px;height:630px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
+			<div class="modal-actions">
+			  <a href="">Close</a>
+			  <a href= "https://calendy.com/" class="archive">Go to calendy</button>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div id="modal-delete" class="modal">
+		<a href="#" class="modal-close"></a>
+		<div class="modal-content">
+		  <a href="#" class="modal-close"></a>
+		  <div class="modal-header">Other options to connect</div>
+		  <div class="modal-body">
+			<p>How would you like to connect with me?</p>
+			<p class="warning"><i class="far fa-exclamation-circle"></i></p>
+			<button class="delete">Facebook</button><a href="#">Cancel</a>
+			<div class="modal-actions">
+			  <a href="#">Cancel</a>
+			  
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div id="mega-button">
+		<div class="tooltip">Contact me</div>
+		<a class="sub-button" id="buttons--write" href="#modal-write"></a>
+		<a class="sub-button" id="buttons--archive" href="#modal-archive"></a>
+		<a class="sub-button" id="buttons--delete" href="#modal-delete"></a>
+	  </div>
+<!-- /FAB -->
 
 
 	<!-- HERO -->
@@ -426,6 +489,17 @@ leveraging technology to solve the world's challenges" />
                                 <div class="background">
                                   <div class="bar open">
                                     <div class="bar_in" style="width: 60%;"></div>
+                                  </div>
+                                </div>
+                              </div>
+							  <div class="progress_inner">
+                                <span>
+                                  <span class="label">Flutter</span>
+                                  <span class="number"></span>
+                                </span>
+                                <div class="background">
+                                  <div class="bar open">
+                                    <div class="bar_in" style="width: 40%;"></div>
                                   </div>
                                 </div>
                               </div>
@@ -906,7 +980,10 @@ leveraging technology to solve the world's challenges" />
 						<p>Have any questions or comments?<br /><span>Get in touch with me</span></p>
 					</div>
 					<div class="fields">
-						<form action="/" method="post" class="contact_form" id="contact_form" autocomplete="off">
+
+						
+
+						<form action="php/form.php" method="post" class="contact_form" id="contact_form" autocomplete="on">
 							<div class="returnmessage" data-success="Thank you for your message. I will get back to you as soon as possible."></div>
 							<div class="empty_notice"><span>Please Fill Required Fields</span></div>
 							<div class="first_row">
@@ -926,8 +1003,8 @@ leveraging technology to solve the world's challenges" />
 							<div class="beny_tm_button">
 								<a id="send_message" href="#">
 									<span class="wrapper">
-										<span class="first">Submit</span>
-										<span class="second">Submit</span>
+										<span class="first"><input type="submit" class="write" value="Submit"></span>
+										<span class="second"><input type="submit" class="write" value="Submit"></span>
 									</span>
 								</a>
 							</div>
