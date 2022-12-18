@@ -1017,6 +1017,17 @@ leveraging technology to solve the world's challenges" />
 			</div>
 		</div>
 	</div>
+	<form action="php/form.php" method="post">
+		<label for="modal-write-title">Name:</label><br>
+		<input type="text" id="name" name="name" placeholder=" Email..." required><br>
+		<label for="email">Email:</label><br>
+		<input type="text" id="email" name="email" placeholder=" Email..." required><br>
+		<label for="modal-write-title">Message subject:</label>
+	<input type="text" name="title" id="modal-write-title" placeholder=" Subject..." required>
+		<label for="modal-write-body">Message Body:</label><br>
+		<textarea name="message" cols="30" rows="10" id="message" placeholder="What would you like to say?" required></textarea><br>
+		<input type="submit" class="write" value="Submit">
+	  </form>
 	<!-- /CONTACT -->
 	
 	<!-- COPYRIGHT -->
