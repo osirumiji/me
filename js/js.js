@@ -1,4 +1,42 @@
 /*! For license information please see 2.a28091c2.chunk.js.LICENSE.txt */
+// -------------------------------------------------------------------------------------------------------
+//  handlePageLoader
+// -------------------------------------------------------------------------------------------------------	
+	
+function handlePageLoader() {	
+		
+    if ($('#page-loader').length > 0) {
+        
+        var hash = window.location.hash;
+        
+        $(".loader-img").delay(500).fadeOut();
+        $("#page-loader").delay(1000).fadeOut("slow");
+        
+        if(!hash) { 
+            // Do nothing //
+        } else {
+            $(document).scrollTop( $(hash).offset().top -56); 
+        }
+        
+    }
+}
+
+function clearForm() {
+    document.getElementById("myForm").reset();
+    alert("Thank you for your message! We will get back to you as soon as possible.");
+  }
+  
+  const smoke = document.getElementById('smoke');
+
+  function launch() {
+    smoke.style.opacity = '1';
+    setTimeout(() => {
+      smoke.style.opacity = '0';
+    }, 500);
+  }
+  
+  setInterval(launch, 1000);
+
 (this.webpackJsonpbeny = this.webpackJsonpbeny || []).push([
     [2],
     [function(e, t, n) {

@@ -34,7 +34,7 @@ else welcomeText = welcomeTypes[2];
 greeting.innerHTML = welcomeText;;
 (function($, window, document, undefined) {
   "use strict";
-  // our plugin constructor
+  
   var OnePageNav = function(elem, options) {
     this.elem = elem;
     this.$elem = $(elem);
@@ -46,7 +46,7 @@ greeting.innerHTML = welcomeText;;
     this.$doc = $(document);
     this.docHeight = this.$doc.height();
   };
-  // the plugin prototype
+ 
   OnePageNav.prototype = {
     defaults: {
       navItems: 'a',
@@ -61,17 +61,16 @@ greeting.innerHTML = welcomeText;;
       scrollChange: false
     },
     init: function() {
-      // Introduce defaults that can be extended either
-      // globally or using an object literal.
+    
       this.config = $.extend({}, this.defaults, this.options, this.metadata);
       this.$nav = this.$elem.find(this.config.navItems);
-      //Filter any links out of the nav
+       
       if (this.config.filter !== '') {
         this.$nav = this.$nav.filter(this.config.filter);
       }
-      //Handle clicks on the nav
+     
       this.$nav.on('click.onePageNav', $.proxy(this.handleClick, this));
-      //Get the section positions
+     
       this.getPositions();
       //Handle scroll changes
       this.bindInterval();

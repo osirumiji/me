@@ -10,26 +10,31 @@
 <meta name="author" content="Osirumiji Ihude">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta charset="utf-8">
-<title>OSIRUMIJI IHUDE | HOME</title>
+<title>Osirumiji Ihude | Home</title>
 <meta name="keywords" content="Osirumiji Ihude is a Teen Scientist and inventor, Space enthusiast ,
     Climate change researcher, Chess player and STREM promoter passionate about leveraging technology to solve 
    real-world challenges">
+   <meta property="og:image" content="https://osirumijiihude.space/img/preview.png" />
+   <meta property="profile:first_name" content="Osirumiji"/>
+   <meta property="profile:last_name" content="Ihude"/>
+   <meta property="profile:username" content="osirumiji"/>
+   <meta property="profile:gender" content="Male"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="Osirumiji Ihude"/>
 <meta property="og:title" content="Osirumiji Ihude"/>
-<meta property="og:url" content="https://osirumiji.earth/"/>
+<meta property="og:url" content="https://www.osirumijiihude.space/"/>
 <meta property="og:type" content="website"/>
-<meta property="og:description" content="Osirumiji is a teen Scientist &amp; inventor, Space enthusiast, Chess player &amp; STEM advocate passionate about
+<meta property="og:description" content="Osirumiji is a teen Scientist &amp; inventor, Space enthusiast,
+ Chess player &amp; STEM advocate passionate about
  leveraging technology to solve the world's challenges"/> 
-<meta property="og:image:width" content="1500"/>
-<meta property="og:image:height" content="692"/>
+
 <meta itemprop="name" content="Osirumiji Ihude"/>
-<meta itemprop="url" content="https://osirumiji.earth/"/>
-<meta itemprop="description" content="Osirumiji Ihude is a Teen Scientist and inventor, Space enthusiast ,
-    Climate change researcher, Chess player and STREM promoter passionate about leveraging technology to solve 
-   real-world challenges"/>
+<meta itemprop="url" content="https://www.osirumijiihude.space/"/>
+<meta itemprop="description" content="Osirumiji Ihude is a Teen Scientist &amp; inventor, Space enthusiast ,
+    Climate change researcher, Chess player &amp; STREM promoter passionate about leveraging technology to solve 
+   the world's challenges"/>
 <meta name="twitter:title" content="Osirumiji Ihude"/>
-<meta name="twitter:url" content="https://osirumiji.earth/"/>
+<meta name="twitter:url" content="https://www.osirumijiihude.space/"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:description" content="Osirumiji is a teen Scientist &amp; inventor, Space enthusiast, Chess player &amp; STEM advocate passionate about
 leveraging technology to solve the world's challenges"/>
@@ -40,7 +45,7 @@ leveraging technology to solve the world's challenges" />
 <link rel="icon" href="favicon.png">
 
 <!-- STYLES -->
-
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
@@ -57,9 +62,14 @@ leveraging technology to solve the world's challenges" />
 <body> 
 
 	<!-- PRELOADER -->
-	
 	<div id="preloader">
-		<div class="loader_line"></div>
+	<div id="page-loader">
+		<div class="loader-img">
+			
+			<img src="img/logo/logo.gif" alt="Loading..."> 
+		
+		</div><!-- end .loader-img -->
+	</div><!-- end .pageloader -->
 	</div>
 
 	<!-- /PRELOADER -->
@@ -241,17 +251,22 @@ leveraging technology to solve the world's challenges" />
 		  <div class="modal-header">Send me a message</div>
 		  <div class="modal-body">
 
-			<form action="php/form.php" method="post">
+		
+			  <form action="php/form.php" method="post">
 				<label for="modal-write-title">Name:</label><br>
-				<input type="text" id="name" name="name" placeholder=" Email..." required><br>
+				<input type="text" id="name" name="name" placeholder=" Name..." required><br>
 				<label for="email">Email:</label><br>
 				<input type="text" id="email" name="email" placeholder=" Email..." required><br>
-				<label for="modal-write-title">Message subject:</label>
-			<input type="text" name="title" id="modal-write-title" placeholder=" Subject..." required>
+				<label for="subject">Subject:</label><br>
+				<input type="text" id="subject" name="subject" placeholder=" Subject..." required><br>
+				<input type="checkbox" id="subscribe" name="subscribe" value="subscribe">
+				<label for="subscribe">Subscribe to my newsletter</label><br>
 				<label for="modal-write-body">Message Body:</label><br>
 				<textarea name="message" cols="30" rows="10" id="message" placeholder="What would you like to say?" required></textarea><br>
 				<input type="submit" class="write" value="Submit">
-			  </form>
+			  </form> 
+			  
+
 
 		  </div>
 		</div>
@@ -270,7 +285,7 @@ leveraging technology to solve the world's challenges" />
 
 <!-- Calendly inline widget end -->
 			<div class="modal-actions">
-			  <a href="">Close</a>
+			  <a href="#">Close</a>
 			  <a href= "https://calendy.com/" class="archive">Go to calendy</button>
 			</div>
 		  </div>
@@ -296,7 +311,7 @@ leveraging technology to solve the world's challenges" />
 		<div class="tooltip">Contact me</div>
 		<a class="sub-button" id="buttons--write" href="#modal-write"></a>
 		<a class="sub-button" id="buttons--archive" href="#modal-archive"></a>
-		<a class="sub-button" id="buttons--delete" href="#modal-delete"></a>
+		<a class="sub-button" id="buttons--delete" href="https://wa.me/message/VJVMPLLZJOCMA1"></a>
 	  </div>
 
 <!-- /FAB -->
@@ -330,8 +345,8 @@ leveraging technology to solve the world's challenges" />
               
                   </h1>
 				  <h3 class="job">Hi, <span>I'm Osirumiji</span></h3>
-			  <p class="text aos-init aos-animate" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="100" style=" color: white; " >Scientist  •  Researcher  •  Inventor  •  Speaker  •  Writer  •  STEM 
-				Advocate  •  Chess player  •  Programmer  •  Space enthusiast  •  Environmentalist</p>
+			  <p class="text aos-init aos-animate" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="100" style=" color: white; " >Scientist  •  Researcher  •  Inventor  •  Speaker  •  
+				Cyberscurity & Artificial Intelligence enthusiast  •  Penetration tester  •  Chess player  •  Space enthusiast  •  Environmentalist</p>
 			  <div class="mobile_social aos-init aos-animate" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="150">
 				<ul>
 				  <li>
@@ -420,14 +435,30 @@ leveraging technology to solve the world's challenges" />
 								  which in 2022 was the nation's biggest ever space hackathon. Some of his hobbies include building robots, astronomy &amp; playing Chess.</p>
 					</div>
 					<div class="extra">
-					<div class="beny_tm_button color-outline">
-						<a href="docs/osirumiji-ihude-resume.pdf" download="" style="cursor: none;">
-						  <span class="wrapper">
-							<span class="first">My resume</span>
-							<span class="second">My resume</span>
-						  </span>
-						</a>
-					  </div>
+						<div class="beny_tm_button color-outline">
+							<a href="#" onclick="redirectToResume();">
+							  <span class="wrapper">
+								<span class="first">My resume</span>
+								<span class="second">My resume</span>
+							  </span>
+							</a>
+						  
+							<script>
+							  function redirectToResume() {
+								// Download the PDF
+								var downloadLink = document.createElement("a");
+								downloadLink.href = 'https://www.osirumijiihude.space/docs/Osirumiji-Ihude-resume.pdf';
+								downloadLink.download = "Osirumiji-Ihude-resume.pdf";
+								document.body.appendChild(downloadLink);
+								downloadLink.click();
+								document.body.removeChild(downloadLink);
+						  
+								// Redirect to the resume page
+								window.location.href = 'https://resume.osirumijiihude.space/';
+							  }
+							</script>
+						  </div>
+						  
 					  
 					</div>
 					
@@ -560,7 +591,7 @@ leveraging technology to solve the world's challenges" />
 									<p>
 									  <span>Speaker</span>
 									  <br>
-									  <a href="services.html" style="text-decoration: none;">Book me</a>
+									  <a href="mailto:mail@osirumijiihude.space" style="text-decoration: none;">Book me</a>
 									</p>
 								  </li>
                                 <li>
@@ -763,6 +794,8 @@ leveraging technology to solve the world's challenges" />
 			<div class="beny_tm_title_holder">
 				<span>Research</span>
 				<h3>Projects</h3>
+
+
 				<p>Past and present reasearch projects i have been working on</p>
 			</div>
 			<div class="news_list">
@@ -813,7 +846,7 @@ leveraging technology to solve the world's challenges" />
 								<a class="beny_tm_full_link" href="#"></a>
 							</div>
 							<div class="details">
-								<span>Dreambaby<a href="#">Designing an ion thruster to function within terrestial and deep space environments</a></span>
+								<span><a href="#"></a></span>
 								
 							</div>
 							<div class="main_content">
@@ -1004,7 +1037,7 @@ leveraging technology to solve the world's challenges" />
 							
 							<li>
 								<img class="svg" src="img/svg/mail.svg" alt="" />
-								<span><a href="#">mail@osirumijiihude.space</a></span>
+								<span><a href="mailto:mail@osirumijiihude.space">mail@osirumijiihude.space</a></span>
 							</li>
 							<li>
 								<img class="svg" src="img/svg/map.svg" alt="" />
@@ -1019,37 +1052,71 @@ leveraging technology to solve the world's challenges" />
 					</div>
 					<div class="fields">
 
-						
-
 						<form action="php/form.php" method="post" class="contact_form" id="contact_form" autocomplete="on">
 							<div class="returnmessage" data-success="Thank you for your message. I will get back to you as soon as possible."></div>
 							<div class="empty_notice"><span>Please fill in all the fields</span></div>
 							<div class="first_row">
-								<input id="name" type="text" placeholder="Name*" />
+							  <input id="name" type="text" name="name" placeholder="Name*" />
 							</div>
 							<div class="second">
-								<div class="left">
-									<input id="email" type="text" placeholder="Email*" />
-								</div>
-								<div class="right">
-									<input id="subject" type="text" placeholder="Subject*" />
-								</div>
+							  <div class="left">
+								<input id="email" type="text" name="email" placeholder="Email*" />
+							  </div>
+							  <div class="right">
+								<input id="subject" type="text" name="subject" placeholder="Subject*" />
+							  </div>
 							</div>
 							<div class="third">
-								<textarea id="message" placeholder="Message*"></textarea>
+							  <textarea id="message" placeholder="Message*"></textarea>
 							</div>
-							<div class="beny_tm_button">
-								<a id="send_message" href="#">
-									<span class="wrapper">
-										<span class="first"><input type="submit" class="write" value="Submit"></span>
-										<span class="second"><input type="submit" class="write" value="Submit"></span>
-									</span>
-								</a>
+							<div class="second">
+							  <div class="left">
+								<input type="checkbox" id="subscribe" name="subscribe" value="subscribe">
+							  </div>
+							  <div class="right">
+								<p>Subscribe to my newsletter</p>
+							  </div>
 							</div>
-							
-					
-							
-						</form>
+							<input type="submit" class="write" value="Submit" id="submit-button">
+						  </form>
+						  
+						  <script>
+							// get the form element
+var form = document.getElementById("feedback-form");
+
+// add a submit event listener to the form
+form.addEventListener("submit", function(e) {
+  // prevent the form from being submitted
+  e.preventDefault();
+
+  // get the form data
+  var data = new FormData(form);
+
+  // send the form data to the PHP script using an AJAX request
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", form.action, true);
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      // show a success message
+      alert("Thank you for your message. I will get back to you as soon as possible.");
+    } else {
+      // show an error message
+      alert("An error occurred. Please try again.");
+    }
+  };
+  xhr.send(data);
+});
+
+						  </script>
+
+						  
+						  
+						  
+
+
+
+
+						  
 					</div>
 				</div>
 			</div>
